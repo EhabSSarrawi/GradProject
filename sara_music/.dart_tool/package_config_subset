@@ -22,6 +22,10 @@ boolean_selector
 2.12
 file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/boolean_selector-2.1.0/
 file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/boolean_selector-2.1.0/lib/
+calendar_timeline
+2.12
+file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/calendar_timeline-1.0.4/
+file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/calendar_timeline-1.0.4/lib/
 characters
 2.12
 file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/characters-1.2.0/
@@ -246,6 +250,14 @@ process
 2.14
 file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/process-4.2.4/
 file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/process-4.2.4/lib/
+scrollable_positioned_list
+2.12
+file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/scrollable_positioned_list-0.2.3/
+file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/scrollable_positioned_list-0.2.3/lib/
+shape_of_view_null_safe
+2.12
+file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/shape_of_view_null_safe-2.0.0/
+file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/shape_of_view_null_safe-2.0.0/lib/
 sk_onboarding_screen
 2.1
 file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/sk_onboarding_screen-1.0.1/
@@ -254,6 +266,10 @@ smooth_page_indicator
 2.5
 file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/smooth_page_indicator-0.1.5/
 file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/smooth_page_indicator-0.1.5/lib/
+smooth_star_rating
+2.7
+file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/smooth_star_rating-1.1.1/
+file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/smooth_star_rating-1.1.1/lib/
 source_span
 2.12
 file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/source_span-1.8.1/
@@ -290,6 +306,10 @@ vector_math
 2.14
 file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/vector_math-2.1.1/
 file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/vector_math-2.1.1/lib/
+vs_scrollbar
+2.12
+file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/vs_scrollbar-0.2.1/
+file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/vs_scrollbar-0.2.1/lib/
 win32
 2.15
 file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/win32-2.4.1/

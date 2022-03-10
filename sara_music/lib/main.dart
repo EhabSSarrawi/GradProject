@@ -38,6 +38,8 @@ class MyApp extends StatelessWidget {
           inputDecorationTheme: InputDecorationTheme(
               filled: true,
               fillColor: Color(0xfff2f9fe),
+              labelStyle: TextStyle(color: Colors.grey.shade800),
+              iconColor: Colors.pink.shade600,
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(25),
                 borderSide: BorderSide(color: Colors.grey.shade200),
@@ -48,7 +50,7 @@ class MyApp extends StatelessWidget {
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(25),
-                borderSide: BorderSide(color: Colors.grey.shade200),
+                borderSide: BorderSide(color: Colors.pink.shade600),
               ))),
       routes: {
         "login": (context) => Login(),

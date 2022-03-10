@@ -32,6 +32,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "calendar_timeline",
+      "rootUri": "file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/calendar_timeline-1.0.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "characters",
       "rootUri": "file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/characters-1.2.0",
       "packageUri": "lib/",
@@ -386,6 +392,18 @@
       "languageVersion": "2.14"
     },
     {
+      "name": "scrollable_positioned_list",
+      "rootUri": "file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/scrollable_positioned_list-0.2.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "shape_of_view_null_safe",
+      "rootUri": "file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/shape_of_view_null_safe-2.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "sk_onboarding_screen",
       "rootUri": "file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/sk_onboarding_screen-1.0.1",
       "packageUri": "lib/",
@@ -402,6 +420,12 @@
       "rootUri": "file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/smooth_page_indicator-0.1.5",
       "packageUri": "lib/",
       "languageVersion": "2.5"
+    },
+    {
+      "name": "smooth_star_rating",
+      "rootUri": "file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/smooth_star_rating-1.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.7"
     },
     {
       "name": "source_span",
@@ -458,6 +482,12 @@
       "languageVersion": "2.14"
     },
     {
+      "name": "vs_scrollbar",
+      "rootUri": "file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/vs_scrollbar-0.2.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "win32",
       "rootUri": "file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/win32-2.4.1",
       "packageUri": "lib/",
@@ -488,7 +518,7 @@
       "languageVersion": "2.15"
     }
   ],
-  "generated": "2022-03-10T15:15:19.561564Z",
+  "generated": "2022-03-10T15:35:07.087007Z",
   "generator": "pub",
   "generatorVersion": "2.15.1"
 }

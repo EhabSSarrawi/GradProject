@@ -55,6 +55,10 @@ dependencies:
   pin_entry_text_field: ^0.1.4
   flutter_secure_storage: ^5.0.2
   font_awesome_flutter: ^9.2.0
+  calendar_timeline: ^1.0.4
+  vs_scrollbar: ^0.2.1
+  shape_of_view_null_safe: ^2.0.0
+  smooth_star_rating: ^1.1.1
   
 
   
