@@ -54,6 +54,7 @@ dependencies:
   motion_toast: ^2.1.2
   pin_entry_text_field: ^0.1.4
   flutter_secure_storage: ^5.0.2
+  font_awesome_flutter: ^9.2.0
   
 
   
