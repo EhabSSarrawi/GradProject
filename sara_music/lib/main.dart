@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:sara_music/Screens/Categories_Screen.dart';
 import 'package:sara_music/Screens/Category.dart';
 import 'package:sara_music/Screens/Details_screen.dart';
@@ -31,8 +32,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: IntroPage(),
+      home: bottom_bar(),
       theme: ThemeData(
+        textTheme: GoogleFonts.sansitaTextTheme(Theme.of(context).textTheme),
           primaryColor: Colors.pink[600],
           buttonColor: Colors.pink[600],
           inputDecorationTheme: InputDecorationTheme(
