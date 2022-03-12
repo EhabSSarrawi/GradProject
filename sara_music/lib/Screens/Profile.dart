@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:sara_music/Screens/Edit_Profile.dart';
 import 'package:sara_music/Screens/MyDrawer.dart';
+import 'package:sara_music/Screens/Settings_Page.dart';
 
 class Profile extends StatefulWidget {
   @override
@@ -51,7 +52,8 @@ class ProfileState extends State<Profile> {
                 Container(
                     margin: EdgeInsets.only(top: 15, left: 140),
                     child: IconButton(
-                      onPressed: () {},
+                      onPressed: () {Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context) =>Settings_Page()));},
                       icon: Icon(Icons.settings),
                       alignment: Alignment.centerRight,
                       iconSize: 30,

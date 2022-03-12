@@ -54,7 +54,7 @@ class Edit_ProfileState extends State<Edit_Profile> {
                   ),
                 ),
                 Container(
-                    margin: EdgeInsets.only(top: 15, left: 140),
+                    margin: EdgeInsets.only(top: 15, left: 130),
                     child: IconButton(
                       onPressed: () {},
                       icon: Icon(Icons.settings),

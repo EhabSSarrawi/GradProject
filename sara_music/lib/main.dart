@@ -6,6 +6,7 @@ import 'package:sara_music/Screens/Categories_Screen.dart';
 import 'package:sara_music/Screens/Category.dart';
 import 'package:sara_music/Screens/Details_screen.dart';
 import 'package:sara_music/Screens/Profile.dart';
+import 'package:sara_music/Screens/Settings_Page.dart';
 import 'package:sara_music/Screens/bottom_bar.dart';
 import 'package:sara_music/authi/ForgetPassword.dart';
 import 'package:sara_music/authi/ResetPassword.dart';
@@ -62,6 +63,7 @@ class MyApp extends StatelessWidget {
         "Bottom_bar": (context) => bottom_bar(),
         "Categories": (context) => Categories_Screen(),
         "ResetPass": (context) => ResetPassword(),
+        "Settings": (context) => Settings_Page(),
       },
     );
   }
