@@ -63,6 +63,7 @@ class bottom_barState extends State<bottom_bar> {
                 border:
                     Border(top: BorderSide(color: Colors.grey, width: 0.5))),
             child: BottomNavigationBar(
+              selectedFontSize: 13,
               onTap: _selectPage,
               backgroundColor: Theme.of(context).primaryColor,
               unselectedItemColor: Theme.of(context).textSelectionColor,
@@ -70,41 +71,25 @@ class bottom_barState extends State<bottom_bar> {
               currentIndex: _selectedPageIndex,
               items: [
                 BottomNavigationBarItem(
+                  label: "Home",
                   icon: Icon(LineIcons.home),
-                  title: Text(
-                    "Home",
-                    style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600),
-                  ),
                 ),
                 BottomNavigationBarItem(
                   icon: Icon(LineIcons.calendarPlus),
-                  title: Text("Booking",
-                      style:
-                          TextStyle(fontSize: 13, fontWeight: FontWeight.w600)),
+                  label: "Booking",
                 ),
                 BottomNavigationBarItem(
-                  icon: Transform(
-                      alignment: Alignment.center,
-                      transform: Matrix4.rotationY(math.pi),
-                      child: Icon(
-                        LineIcons.search,
-                      )),
-                  title: Text("Search",
-                      style:
-                          TextStyle(fontSize: 13, fontWeight: FontWeight.w600)),
-                ),
+                    icon: Transform(
+                        alignment: Alignment.center,
+                        transform: Matrix4.rotationY(math.pi),
+                        child: Icon(
+                          LineIcons.search,
+                        )),
+                    label: "Search"),
                 BottomNavigationBarItem(
-                  icon: Icon(LineIcons.addToShoppingCart),
-                  title: Text("Shop",
-                      style:
-                          TextStyle(fontSize: 13, fontWeight: FontWeight.w600)),
-                ),
+                    icon: Icon(LineIcons.addToShoppingCart), label: "Shop"),
                 BottomNavigationBarItem(
-                  icon: Icon(LineIcons.user),
-                  title: Text("Profile",
-                      style:
-                          TextStyle(fontSize: 13, fontWeight: FontWeight.w600)),
-                ),
+                    icon: Icon(LineIcons.user), label: "Profile"),
               ],
             ),
           ),
