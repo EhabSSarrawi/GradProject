@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:sara_music/Screens/Profile.dart';
 import 'package:sara_music/Screens/bottom_bar.dart';
+import 'package:image_picker/image_picker.dart';
+import 'dart:io' as file;
+import 'dart:async';
+import 'Settings_Page.dart';
 
 class Edit_Profile extends StatefulWidget {
   @override
@@ -11,7 +15,14 @@ class Edit_Profile extends StatefulWidget {
 }
 
 class Edit_ProfileState extends State<Edit_Profile> {
-  bool showPassword = false;
+  late file.File imagepicker;
+  Future getImageFromGallery() async {
+    var image = await ImagePicker.pickImage(source: ImageSource.gallery);
+    setState(() {
+      imagepicker = image;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,7 +67,11 @@ class Edit_ProfileState extends State<Edit_Profile> {
                 Container(
                     margin: EdgeInsets.only(top: 15, left: 130),
                     child: IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (BuildContext context) =>
+                                Settings_Page()));
+                      },
                       icon: Icon(Icons.settings),
                       alignment: Alignment.centerRight,
                       iconSize: 30,
@@ -71,7 +86,7 @@ class Edit_ProfileState extends State<Edit_Profile> {
                 child: Align(
                   alignment: Alignment.bottomRight,
                   child: InkWell(
-                    onTap: () {},
+                    onTap: () => getImageFromGallery(),
                     child: CircleAvatar(
                       radius: 25,
                       child: Icon(Icons.edit),
@@ -165,7 +180,7 @@ class Edit_ProfileState extends State<Edit_Profile> {
                       ),
                       RaisedButton(
                         onPressed: () {},
-                        color: Colors.pink[600],
+                        color: Colors.pink[100],
                         padding: EdgeInsets.symmetric(horizontal: 50),
                         elevation: 2,
                         shape: RoundedRectangleBorder(

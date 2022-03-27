@@ -19,6 +19,8 @@ import 'package:http/http.dart' as http;
 import 'dart:async';
 import 'dart:convert';
 
+import 'Teacher/Tbottom_bar.dart';
+
 void main() {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
     statusBarColor: Colors.black,
@@ -27,7 +29,6 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  
   const MyApp({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -35,7 +36,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: bottom_bar(),
       theme: ThemeData(
-        textTheme: GoogleFonts.sansitaTextTheme(Theme.of(context).textTheme),
+          textTheme: GoogleFonts.sansitaTextTheme(Theme.of(context).textTheme),
           primaryColor: Colors.pink[600],
           buttonColor: Colors.pink[600],
           inputDecorationTheme: InputDecorationTheme(
