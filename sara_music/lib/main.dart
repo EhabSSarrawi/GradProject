@@ -34,14 +34,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: bottom_bar(),
+      home: IntroPage(),
       theme: ThemeData(
           textTheme: GoogleFonts.sansitaTextTheme(Theme.of(context).textTheme),
           primaryColor: Colors.pink[600],
           buttonColor: Colors.pink[600],
           inputDecorationTheme: InputDecorationTheme(
               filled: true,
-              fillColor: Color(0xfff2f9fe),
+              fillColor: Color.fromARGB(255, 231, 241, 241),
               labelStyle: TextStyle(color: Colors.grey.shade800),
               iconColor: Colors.pink.shade600,
               enabledBorder: OutlineInputBorder(

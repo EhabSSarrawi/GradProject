@@ -95,51 +95,6 @@ class HomepageState extends State<Homepage> {
             SizedBox(
               height: 10,
             ),
-            /*Container(
-              height: MediaQuery.of(context).size.height - 600,             
-              child: VsScrollbar(
-                controller: _scrollController,
-                showTrackOnHover: true,
-                isAlwaysShown: false,
-                scrollbarFadeDuration: Duration(milliseconds: 500),
-                scrollbarTimeToFade: Duration(milliseconds: 800),
-                style: VsScrollbarStyle(
-                  hoverThickness: 10.0,
-                  radius: Radius.circular(10),
-                  thickness: 5.0,
-                  color: Colors.purple.shade900,
-                ),
-                child: ListView.builder(
-                    controller: _scrollController,
-                    shrinkWrap: true,
-                    physics: BouncingScrollPhysics(),
-                    scrollDirection:
-                        _verticalList ? Axis.vertical : Axis.horizontal,
-                    itemCount: 5,
-                    itemBuilder: (BuildContext context, int index) {
-                      Color? color = Colors.pink[600];                    
-                      return InkWell(                       
-                        child: Container(
-                                                     
-                            alignment: Alignment.center,
-                            child: Column(
-                              children: [
-                                
-                                
-                                
-                              ],
-                            ),
-                            height: 50,
-                            width: MediaQuery.of(context).size.width - 300,
-                            decoration: BoxDecoration(
-                                color: Color(0xffb4dbd8),
-                                borderRadius: BorderRadius.circular(20)),
-                            margin: EdgeInsets.only(
-                                left: 10, right: 10, bottom: 20)),
-                      );
-                    }),
-              ),
-            ),*/
             SizedBox(
               height: 199,
               child: ListView.separated(
@@ -282,7 +237,7 @@ class HomepageState extends State<Homepage> {
               ],
             ),
             SizedBox(
-              height: 15,
+              height: 10,
             ),
             Expanded(
               child: StaggeredGridView.countBuilder(

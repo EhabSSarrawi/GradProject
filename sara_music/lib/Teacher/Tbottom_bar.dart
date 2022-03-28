@@ -22,9 +22,9 @@ class Tbottom_barState extends State<Tbottom_bar> {
     {
       'page': TAppointment(),
     },
-    {
-      'page': TSearch(),
-    },
+     {
+       'page': TSearch(),
+     },
     {
       'page': TProfile(),
     },

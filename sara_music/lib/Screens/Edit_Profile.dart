@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:sara_music/Screens/Profile.dart';
@@ -180,7 +182,7 @@ class Edit_ProfileState extends State<Edit_Profile> {
                       ),
                       RaisedButton(
                         onPressed: () {},
-                        color: Colors.pink[100],
+                        color: Colors.pink[600],
                         padding: EdgeInsets.symmetric(horizontal: 50),
                         elevation: 2,
                         shape: RoundedRectangleBorder(
