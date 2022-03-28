@@ -10,6 +10,7 @@ import 'package:sara_music/Screens/MyDrawer.dart';
 import 'package:sara_music/Screens/Shop.dart';
 import 'package:sara_music/Screens/Profile.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:sara_music/Screens/Teachers.dart';
 import 'package:smooth_star_rating/smooth_star_rating.dart';
 import 'package:vs_scrollbar/vs_scrollbar.dart';
 
@@ -87,7 +88,7 @@ class HomepageState extends State<Homepage> {
                       style: GoogleFonts.sansita(
                           fontSize: 18, color: Colors.blue)),
                   onTap: () {
-                    Navigator.of(context).pushNamed("Categories");
+                    Navigator.push(context, MaterialPageRoute(builder:(BuildContext context) => Teachers()));
                   },
                 )
               ],
@@ -102,7 +103,7 @@ class HomepageState extends State<Homepage> {
                 shrinkWrap: true,
                 scrollDirection: Axis.horizontal,
                 padding: EdgeInsets.symmetric(horizontal: 24),
-                itemCount: teacher.length,
+                itemCount: 3,
                 separatorBuilder: (BuildContext context, int index) =>
                     Divider(indent: 16),
                 itemBuilder: (BuildContext context, int index) => Container(
