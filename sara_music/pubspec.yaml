@@ -63,6 +63,7 @@ dependencies:
   image_picker: 
   toggle_bar: ^1.0.0
   full_screen_menu: ^1.0.0
+ 
 
 
   

@@ -7,6 +7,7 @@ import 'package:sara_music/Screens/Details_screen.dart';
 import 'package:sara_music/Screens/Profile.dart';
 import 'package:sara_music/Screens/Settings_Page.dart';
 import 'package:sara_music/Screens/bottom_bar.dart';
+import 'package:sara_music/Teacher/TDetails.dart';
 import 'package:sara_music/authi/ForgetPassword.dart';
 import 'package:sara_music/authi/ResetPassword.dart';
 import 'package:sara_music/authi/Verify.dart';
