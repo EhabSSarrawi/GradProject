@@ -65,6 +65,7 @@ class BookingState extends State<Booking> {
               ),
               Row(
                 children: [
+                  SizedBox(width: 10,),
                   Container(
                     margin: EdgeInsets.only(top: 15, left: 10, right: 10),
                     child: InkWell(

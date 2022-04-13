@@ -1,19 +1,8 @@
-// import 'package:flutter/material.dart';
-
-// class TAppointment extends StatefulWidget {
-//   @override
-//   State<StatefulWidget> createState() {
-//     return TAppointment_State();
-//   }
-// }
-
-// class TAppointment_State extends State<TAppointment> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold();
-//   }
-// }
 import 'package:flutter/material.dart';
+import 'package:sara_music/Shop/colors.dart';
+import 'package:slide_popup_dialog/slide_popup_dialog.dart' as slideDialog;
+import 'package:time_range/time_range.dart';
+import 'package:date_picker_timeline/date_picker_timeline.dart';
 
 class TSchedule extends StatefulWidget {
   @override
@@ -76,13 +65,23 @@ List<Map> schedules = [
 ];
 
 class TScheduleState extends State<TSchedule> {
+  final _defaultTimeRange = TimeRangeResult(
+    TimeOfDay(hour: 9, minute: 00),
+    TimeOfDay(hour: 10, minute: 00),
+  );
+  TimeRangeResult? _timeRange;
+
   FilterStatus status = FilterStatus.Upcoming;
   Alignment _alignment = Alignment.centerLeft;
 
   late bool _isButtonDisabled;
+  DatePickerController _controller = DatePickerController();
 
+  DateTime _selectedValue = DateTime.now();
   @override
   void initState() {
+    super.initState();
+    _timeRange = _defaultTimeRange;
     _isButtonDisabled = false;
   }
 
@@ -326,7 +325,9 @@ class TScheduleState extends State<TSchedule> {
                                     Expanded(
                                       child: ElevatedButton(
                                         child: Text('Reschedule'),
-                                        onPressed: () => {},
+                                        onPressed: () {
+                                          _showDialog();
+                                        },
                                       ),
                                     )
                                   ],
@@ -393,6 +394,103 @@ class TScheduleState extends State<TSchedule> {
       ),
     );
   }
+
+  static const double leftPadding = 50;
+  void _showDialog() {
+    slideDialog.showSlideDialog(
+      context: context,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          SizedBox(
+            height: 20,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: leftPadding),
+            child: Text(
+              'Select New Date',
+              style: Theme.of(context).textTheme.headline6!.copyWith(
+                  fontWeight: FontWeight.bold, color: Color(MyColors.dark)),
+            ),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Container(
+            child: DatePicker(
+              DateTime.now(),
+              width: 60,
+              height: 80,
+              controller: _controller,
+              initialSelectedDate: DateTime.now(),
+              selectionColor: Color(MyColors.primary),
+              selectedTextColor: Colors.white,
+              inactiveDates: [],
+              onDateChange: (date) {
+                // New date selected
+                setState(() {
+                  _selectedValue = date;
+                });
+              },
+            ),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: leftPadding),
+            child: Text(
+              'Select New Time',
+              style: Theme.of(context).textTheme.headline6!.copyWith(
+                  fontWeight: FontWeight.bold, color: Color(MyColors.dark)),
+            ),
+          ),
+          SizedBox(height: 20),
+          TimeRange(
+            fromTitle: Text(
+              'FROM',
+              style: TextStyle(
+                fontSize: 14,
+                color: Color(MyColors.dark),
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+            toTitle: Text(
+              'TO',
+              style: TextStyle(
+                fontSize: 14,
+                color: Color(MyColors.dark),
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+            titlePadding: leftPadding,
+            textStyle: TextStyle(
+              fontWeight: FontWeight.normal,
+              color: Color(MyColors.dark),
+            ),
+            activeTextStyle: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: white,
+            ),
+            borderColor: Color(MyColors.grey02),
+            activeBorderColor: Color(MyColors.grey02),
+            backgroundColor: Colors.transparent,
+            activeBackgroundColor: Color(MyColors.primary),
+            firstTime: TimeOfDay(hour: 9, minute: 00),
+            lastTime: TimeOfDay(hour: 18, minute: 00),
+            initialRange: _timeRange,
+            timeStep: 60,
+            timeBlock: 60,
+            onRangeCompleted: (range) => setState(() => _timeRange = range),
+          ),
+          SizedBox(height: 30),
+        ],
+      ),
+      barrierColor: Colors.white.withOpacity(0.7),
+      pillColor: Color(MyColors.primary),
+      backgroundColor: Color.fromARGB(255, 231, 242, 241),
+    );
+  }
 }
 
 class MyColors {
@@ -401,4 +499,5 @@ class MyColors {
   static int bg = 0xfff5f3fe;
   static int bg03 = 0xffe8eafe;
   static int grey02 = 0xff9796af;
+  static int dark = 0xFF333A47;
 }

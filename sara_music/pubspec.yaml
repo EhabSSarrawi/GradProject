@@ -63,9 +63,11 @@ dependencies:
   image_picker: 
   toggle_bar: ^1.0.0
   full_screen_menu: ^1.0.0
- 
-
-
+  animate_do: ^2.1.0
+  carousel_slider: ^4.0.0
+  slide_popup_dialog: ^0.0.2
+  time_range: ^1.0.2
+  date_picker_timeline: ^1.2.3
   
   
   
@@ -117,6 +119,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - images/
+    - images/shop_images/
     
    
 

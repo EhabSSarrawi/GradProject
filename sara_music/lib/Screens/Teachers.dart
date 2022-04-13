@@ -47,7 +47,7 @@ class TeachersState extends State<Teachers> {
                 Padding(
                   padding: const EdgeInsets.only(left: 15, top: 15, bottom: 5),
                   child: Text(
-                    'Reset Password',
+                    'Teachers',
                     style: Theme.of(context)
                         .textTheme
                         .headline4

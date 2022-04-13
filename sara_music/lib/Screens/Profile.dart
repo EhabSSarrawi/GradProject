@@ -27,6 +27,7 @@ class ProfileState extends State<Profile> {
             ),
             Row(
               children: [
+                SizedBox(width: 10,),
                 Container(
                   margin: EdgeInsets.only(top: 15, left: 10, right: 10),
                   child: InkWell(
@@ -50,7 +51,7 @@ class ProfileState extends State<Profile> {
                   ),
                 ),
                 Container(
-                    margin: EdgeInsets.only(top: 15, left: 140),
+                    margin: EdgeInsets.only(top: 15, left: 130),
                     child: IconButton(
                       onPressed: () {Navigator.of(context).push(MaterialPageRoute(
                   builder: (BuildContext context) =>Settings_Page()));},

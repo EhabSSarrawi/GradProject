@@ -2,6 +2,12 @@
   "configVersion": 2,
   "packages": [
     {
+      "name": "animate_do",
+      "rootUri": "file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/animate_do-2.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "animation_list",
       "rootUri": "file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/animation_list-2.1.0",
       "packageUri": "lib/",
@@ -44,6 +50,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "carousel_slider",
+      "rootUri": "file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/carousel_slider-4.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "characters",
       "rootUri": "file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/characters-1.2.0",
       "packageUri": "lib/",
@@ -76,6 +88,12 @@
     {
       "name": "cupertino_icons",
       "rootUri": "file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/cupertino_icons-1.0.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "date_picker_timeline",
+      "rootUri": "file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/date_picker_timeline-1.2.3",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -446,6 +464,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "slide_popup_dialog",
+      "rootUri": "file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/slide_popup_dialog-0.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
+    },
+    {
       "name": "smooth_page_indicator",
       "rootUri": "file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/smooth_page_indicator-0.1.5",
       "packageUri": "lib/",
@@ -490,6 +514,12 @@
     {
       "name": "test_api",
       "rootUri": "file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/test_api-0.4.8",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "time_range",
+      "rootUri": "file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/time_range-1.0.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -554,7 +584,7 @@
       "languageVersion": "2.15"
     }
   ],
-  "generated": "2022-04-01T21:07:48.874128Z",
+  "generated": "2022-04-13T17:29:56.790699Z",
   "generator": "pub",
   "generatorVersion": "2.16.2"
 }
