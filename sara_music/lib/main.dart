@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'package:sara_music/Screens/Categories_Screen.dart';
 import 'package:sara_music/Screens/Category.dart';
 import 'package:sara_music/Screens/Details_screen.dart';
@@ -18,7 +19,8 @@ import 'package:sara_music/authi/IntroPage.dart';
 import 'package:http/http.dart' as http;
 import 'dart:async';
 import 'dart:convert';
-
+import 'package:sara_music/Admin/screens/home/home_screen.dart';
+import 'Admin/core/init/provider_list.dart';
 import 'Teacher/Tbottom_bar.dart';
 
 void main() {
@@ -27,14 +29,22 @@ void main() {
   ));
   runApp(const MyApp());
 }
-
+Widget build(BuildContext context) {
+  return MultiProvider(
+      providers: [...ApplicationProvider.instance.dependItems],
+      child: FutureBuilder(
+        builder: (context, snapshot) {
+          return MyApp();
+        },
+      ));
+}
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
   @override 
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Tbottom_bar(),
+      home: HomeScreen(),
       theme: ThemeData(
           textTheme: GoogleFonts.sansitaTextTheme(Theme.of(context).textTheme),
           primaryColor: Colors.pink[600],

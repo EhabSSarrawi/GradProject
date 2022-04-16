@@ -399,92 +399,107 @@ class TScheduleState extends State<TSchedule> {
   void _showDialog() {
     slideDialog.showSlideDialog(
       context: context,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          SizedBox(
-            height: 20,
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: leftPadding),
-            child: Text(
-              'Select New Date',
-              style: Theme.of(context).textTheme.headline6!.copyWith(
-                  fontWeight: FontWeight.bold, color: Color(MyColors.dark)),
+      child: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            SizedBox(
+              height: 20,
             ),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          Container(
-            child: DatePicker(
-              DateTime.now(),
-              width: 60,
-              height: 80,
-              controller: _controller,
-              initialSelectedDate: DateTime.now(),
-              selectionColor: Color(MyColors.primary),
-              selectedTextColor: Colors.white,
-              inactiveDates: [],
-              onDateChange: (date) {
-                // New date selected
-                setState(() {
-                  _selectedValue = date;
-                });
-              },
-            ),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: leftPadding),
-            child: Text(
-              'Select New Time',
-              style: Theme.of(context).textTheme.headline6!.copyWith(
-                  fontWeight: FontWeight.bold, color: Color(MyColors.dark)),
-            ),
-          ),
-          SizedBox(height: 20),
-          TimeRange(
-            fromTitle: Text(
-              'FROM',
-              style: TextStyle(
-                fontSize: 14,
-                color: Color(MyColors.dark),
-                fontWeight: FontWeight.w600,
+            Padding(
+              padding: const EdgeInsets.only(left: leftPadding),
+              child: Text(
+                'Select New Date',
+                style: Theme.of(context).textTheme.headline6!.copyWith(
+                    fontWeight: FontWeight.bold, color: Color(MyColors.dark)),
               ),
             ),
-            toTitle: Text(
-              'TO',
-              style: TextStyle(
-                fontSize: 14,
-                color: Color(MyColors.dark),
-                fontWeight: FontWeight.w600,
+            SizedBox(
+              height: 20,
+            ),
+            Container(
+              child: DatePicker(
+                DateTime.now(),
+                width: 60,
+                height: 80,
+                controller: _controller,
+                initialSelectedDate: DateTime.now(),
+                selectionColor: Color(MyColors.primary),
+                selectedTextColor: Colors.white,
+                inactiveDates: [],
+                onDateChange: (date) {
+                  // New date selected
+                  setState(() {
+                    _selectedValue = date;
+                  });
+                },
               ),
             ),
-            titlePadding: leftPadding,
-            textStyle: TextStyle(
-              fontWeight: FontWeight.normal,
-              color: Color(MyColors.dark),
+            SizedBox(
+              height: 20,
             ),
-            activeTextStyle: TextStyle(
-              fontWeight: FontWeight.bold,
-              color: white,
+            Padding(
+              padding: const EdgeInsets.only(left: leftPadding),
+              child: Text(
+                'Select New Time',
+                style: Theme.of(context).textTheme.headline6!.copyWith(
+                    fontWeight: FontWeight.bold, color: Color(MyColors.dark)),
+              ),
             ),
-            borderColor: Color(MyColors.grey02),
-            activeBorderColor: Color(MyColors.grey02),
-            backgroundColor: Colors.transparent,
-            activeBackgroundColor: Color(MyColors.primary),
-            firstTime: TimeOfDay(hour: 9, minute: 00),
-            lastTime: TimeOfDay(hour: 18, minute: 00),
-            initialRange: _timeRange,
-            timeStep: 60,
-            timeBlock: 60,
-            onRangeCompleted: (range) => setState(() => _timeRange = range),
-          ),
-          SizedBox(height: 30),
-        ],
+            SizedBox(height: 20),
+            TimeRange(
+              fromTitle: Text(
+                'FROM',
+                style: TextStyle(
+                  fontSize: 14,
+                  color: Color(MyColors.dark),
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              toTitle: Text(
+                'TO',
+                style: TextStyle(
+                  fontSize: 14,
+                  color: Color(MyColors.dark),
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              titlePadding: leftPadding,
+              textStyle: TextStyle(
+                fontWeight: FontWeight.normal,
+                color: Color(MyColors.dark),
+              ),
+              activeTextStyle: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: white,
+              ),
+              borderColor: Color(MyColors.grey02),
+              activeBorderColor: Color(MyColors.grey02),
+              backgroundColor: Colors.transparent,
+              activeBackgroundColor: Color(MyColors.primary),
+              firstTime: TimeOfDay(hour: 9, minute: 00),
+              lastTime: TimeOfDay(hour: 18, minute: 00),
+              initialRange: _timeRange,
+              timeStep: 60,
+              timeBlock: 60,
+              onRangeCompleted: (range) => setState(() => _timeRange = range),
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            Center(
+                child: ElevatedButton(
+                  
+              onPressed: () {},
+              child: Text("Reschedule"),
+              style: ElevatedButton.styleFrom(
+                primary: Color.fromARGB(255, 46, 23, 172),
+                padding: EdgeInsets.symmetric(vertical: 10,horizontal: 30),
+                textStyle: TextStyle(fontSize: 16)
+              ),
+            ))
+          ],
+        ),
       ),
       barrierColor: Colors.white.withOpacity(0.7),
       pillColor: Color(MyColors.primary),

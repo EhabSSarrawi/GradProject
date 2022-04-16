@@ -112,9 +112,7 @@ class ShopState extends State<Shop> {
                         
                       ),
                     ),
-                    Positioned(
-                      right: 10,
-                      child: IconButton(icon: SvgPicture.asset("images/heart_icon.svg"), onPressed: null))
+                    
                   ],
                 )
               ),

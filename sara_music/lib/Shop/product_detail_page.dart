@@ -3,6 +3,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'cart_page.dart';
 import 'colors.dart';
 import 'product_slider.dart';
@@ -17,7 +18,7 @@ class ProductDetailPage extends StatefulWidget {
 
   const ProductDetailPage(
       {Key? key,
-       required this.id,
+      required this.id,
       required this.name,
       required this.img,
       required this.price,
@@ -31,6 +32,11 @@ class ProductDetailPage extends StatefulWidget {
 class _ProductDetailPageState extends State<ProductDetailPage> {
   int _currentIntValue = 0;
   int activeSize = 0;
+  bool fav_bool = false;
+  void intState() {
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,38 +49,45 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
     return SingleChildScrollView(
       child: Column(
         children: <Widget>[
-          SizedBox(height: 35,),
+          SizedBox(
+            height: 35,
+          ),
           Container(
             width: MediaQuery.of(context).size.width,
-            decoration: BoxDecoration(boxShadow: [
-              BoxShadow(
-                blurRadius: 2,
-                color: black.withOpacity(0.1),
-                spreadRadius: 1,
-              )
-            ], borderRadius: BorderRadius.circular(30), color: Color.fromARGB(255, 231, 241, 241),),
+            decoration: BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                  blurRadius: 2,
+                  color: black.withOpacity(0.1),
+                  spreadRadius: 1,
+                )
+              ],
+              borderRadius: BorderRadius.circular(30),
+              color: Color.fromARGB(255, 231, 241, 241),
+            ),
             child: Stack(
               children: <Widget>[
-                SizedBox(height: 10,),
+                SizedBox(
+                  height: 10,
+                ),
                 FadeInDown(
                   child: ProductSlider(
                     items: widget.mulImg,
                   ),
-                ),               
-                 Positioned(
-                   top: 30,
-                   left: 10,
-                   child: IconButton(
-                        icon: Icon(
-                          Icons.arrow_back_ios,
-                          color: black,
-                          size: 30,
-                        ),
-                        onPressed: () {
-                          Navigator.pop(context);
-                        }),
-                 ),
-                
+                ),
+                Positioned(
+                  top: 30,
+                  left: 10,
+                  child: IconButton(
+                      icon: Icon(
+                        Icons.arrow_back_ios,
+                        color: black,
+                        size: 30,
+                      ),
+                      onPressed: () {
+                        Navigator.pop(context);
+                      }),
+                ),
               ],
             ),
           ),
@@ -122,27 +135,34 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
           SizedBox(
             height: 20,
           ),
-          FadeInDown(child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            IconButton(
-              icon: Icon(Icons.remove),
-              onPressed: () => setState(() {
-                final newValue = _currentIntValue - 1;
-                _currentIntValue = newValue.clamp(0, 100);
-              }),
+          FadeInDown(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                IconButton(
+                  icon: Icon(Icons.remove),
+                  onPressed: () => setState(() {
+                    final newValue = _currentIntValue - 1;
+                    _currentIntValue = newValue.clamp(0, 100);
+                  }),
+                ),
+                Text(
+                  'Number of items: $_currentIntValue',
+                  style: TextStyle(fontSize: 18),
+                ),
+                IconButton(
+                  icon: Icon(Icons.add),
+                  onPressed: () => setState(() {
+                    final newValue = _currentIntValue + 1;
+                    _currentIntValue = newValue.clamp(0, 100);
+                  }),
+                ),
+              ],
             ),
-            Text('Number of items: $_currentIntValue',style: TextStyle(fontSize: 18),),
-            IconButton(
-              icon: Icon(Icons.add),
-              onPressed: () => setState(() {
-                final newValue = _currentIntValue + 1;
-                _currentIntValue = newValue.clamp(0, 100);
-              }),
-            ),
-          ],
-        ),),
-        SizedBox(height: 30,),
+          ),
+          SizedBox(
+            height: 30,
+          ),
           FadeInDown(
             delay: Duration(milliseconds: 550),
             child: Padding(
@@ -162,8 +182,14 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                         ],
                         color: grey),
                     child: Center(
-                      child: SvgPicture.asset("images/heart_icon.svg"),
-                    ),
+                        child: IconButton(
+                      icon: fav_bool? Icon(FontAwesomeIcons.solidHeart,color: Colors.red,):Icon(FontAwesomeIcons.heart),
+                      onPressed: () {
+                        setState(() {
+                          fav_bool = !fav_bool;
+                        });
+                      },
+                    )),
                   ),
                   SizedBox(
                     width: 15,
@@ -191,7 +217,6 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                               ),
                             ),
                           ))),
-                          
                 ],
               ),
             ),

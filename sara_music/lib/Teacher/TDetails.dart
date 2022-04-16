@@ -55,7 +55,7 @@ class TDetails extends StatelessWidget {
               child: Column(
                 children: <Widget>[
                   SizedBox(
-                    height: 30,
+                    height: 20,
                   ),
                   Padding(
                     padding: EdgeInsets.symmetric(
