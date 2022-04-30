@@ -14,8 +14,8 @@ class ProductDetailPage extends StatefulWidget {
   final String img;
   final String price;
   final List<String> mulImg;
-  final List sizes;
-
+  final String desc;
+  
   const ProductDetailPage(
       {Key? key,
       required this.id,
@@ -23,7 +23,7 @@ class ProductDetailPage extends StatefulWidget {
       required this.img,
       required this.price,
       required this.mulImg,
-      required this.sizes})
+      required this.desc})
       : super(key: key);
   @override
   _ProductDetailPageState createState() => _ProductDetailPageState();
@@ -92,66 +92,70 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
             ),
           ),
           SizedBox(
-            height: 30,
-          ),
-          FadeInDown(
-            delay: Duration(milliseconds: 300),
-            child: Image.asset(
-              "images/Logo.png",
-              width: 70,
-              fit: BoxFit.cover,
-            ),
-          ),
-          SizedBox(
-            height: 30,
-          ),
+            height: 10,
+          ),          
           FadeInDown(
             delay: Duration(milliseconds: 350),
-            child: Padding(
-              padding: const EdgeInsets.only(left: 25, right: 25),
-              child: Text(
-                widget.name,
-                style: TextStyle(
-                    fontSize: 35, fontWeight: FontWeight.w600, height: 1.5),
-                textAlign: TextAlign.center,
-              ),
-            ),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          FadeInDown(
-            delay: Duration(milliseconds: 400),
-            child: Padding(
-              padding: const EdgeInsets.only(left: 25, right: 25),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 25, right: 25),
+                  child: Text(
+                    widget.name,
+                    style: TextStyle(
+                        fontSize: 35, fontWeight: FontWeight.w600, height: 1.5),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+             Padding(
+              padding: const EdgeInsets.only(left: 25, right: 25,top: 10),
               child: Text(
                 "\$ " + widget.price,
                 style: TextStyle(
-                    fontSize: 35, fontWeight: FontWeight.w500, height: 1.5),
+                    fontSize: 24, fontWeight: FontWeight.w500, height: 1.5),
                 textAlign: TextAlign.center,
+              ),
+            ),
+             ],
+            ),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+         
+          FadeInDown(
+            delay: Duration(milliseconds: 300),
+            child: Padding(
+              padding: const EdgeInsets.only(left: 25, right: 25),
+              child: Text(
+                 widget.desc,
+                style: TextStyle(
+                    fontSize: 18,color: Color.fromARGB(255, 71, 68, 68)),
+                textAlign: TextAlign.start,
               ),
             ),
           ),
           SizedBox(
             height: 20,
           ),
-          FadeInDown(
+           FadeInDown(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 IconButton(
-                  icon: Icon(Icons.remove),
+                  icon: Icon(Icons.remove,color: Colors.red,),
                   onPressed: () => setState(() {
                     final newValue = _currentIntValue - 1;
                     _currentIntValue = newValue.clamp(0, 100);
                   }),
                 ),
                 Text(
-                  'Number of items: $_currentIntValue',
-                  style: TextStyle(fontSize: 18),
+                  'Number of items:  $_currentIntValue',
+                  style: TextStyle(fontSize: 20),
                 ),
                 IconButton(
-                  icon: Icon(Icons.add),
+                  icon: Icon(Icons.add,color: Colors.red,),
                   onPressed: () => setState(() {
                     final newValue = _currentIntValue + 1;
                     _currentIntValue = newValue.clamp(0, 100);
@@ -161,7 +165,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
             ),
           ),
           SizedBox(
-            height: 30,
+            height: 20,
           ),
           FadeInDown(
             delay: Duration(milliseconds: 550),

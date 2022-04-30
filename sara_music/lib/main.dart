@@ -23,6 +23,7 @@ import 'package:sara_music/Admin/screens/home/home_screen.dart';
 import 'Admin/core/init/provider_list.dart';
 import 'Teacher/Tbottom_bar.dart';
 
+
 void main() {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
     statusBarColor: Colors.black,

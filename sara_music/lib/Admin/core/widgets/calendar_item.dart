@@ -86,7 +86,7 @@ class _Date extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 8),
       decoration: BoxDecoration(
-        color: secondaryColor,
+        color: Colors.pink[600],
         borderRadius: BorderRadius.circular(4),
         border: Border.all(
           color: greenColor.withOpacity(0.5),

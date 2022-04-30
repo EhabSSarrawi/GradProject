@@ -70,7 +70,7 @@ class ShopState extends State<Shop> {
                   img: products[index]['img'],
                   price: products[index]['price'],
                   mulImg: products[index]['mul_img'],
-                  sizes: products[index]['sizes'],
+                  desc: products[index]['desc'],
                 )));
               },
                           child: Container(
