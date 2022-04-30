@@ -26,7 +26,7 @@ class _AddNewState extends State<AddNew> {
     'Oud',
     'Vioce',   
   ];
-  List<String> labels = ["New User", "Instrument","Course"];
+  List<String> labels = ["Teacher", "Student" , "Course" ,"Instrument"];
   int currentIndex = 0;
   int value = 0;
   TextEditingController dateinput = TextEditingController();
@@ -41,7 +41,7 @@ class _AddNewState extends State<AddNew> {
   TextEditingController Gendeer = TextEditingController();
 
   Widget CustomRadioButton(
-      String text, int index, TextEditingController Gendeer) {
+      String text, int index, TextEditingController Gendeer) {       
     return OutlineButton(
       hoverColor: Colors.pink,
       onPressed: () {
@@ -61,13 +61,18 @@ class _AddNewState extends State<AddNew> {
           color: (value == index)
               ? Color.fromARGB(255, 12, 51, 113)
               : Colors.black,
+          fontWeight:  (value == index)
+              ? FontWeight.bold
+              : FontWeight.normal,   
+          fontSize:  (value == index)?15:14,    
         ),
       ),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),     
       borderSide: BorderSide(
           color: (value == index)
-              ? Color.fromARGB(255, 12, 51, 113)
+              ? Color.fromARGB(255, 12, 51, 113) 
               : Colors.black),
+              
     );
   }
 
@@ -130,7 +135,7 @@ class _AddNewState extends State<AddNew> {
             onSelectionUpdated: (index) => setState(() => currentIndex = index),
           ),
           SizedBox(
-            height: 20,
+            height: 10,
           ),
          if( currentIndex == 0)
                FadeInDown(
@@ -376,10 +381,10 @@ class _AddNewState extends State<AddNew> {
                                 Container(
                                   margin: EdgeInsets.only(left: 75, top: 5),
                                   height: 45,
-                                  child: Row(
+                                  child: Row(                                  
                                     children: [
                                       CustomRadioButton("Male", 1, Gendeer),
-                                      Text("\t\t\t\t\t\t\t"),
+                                      SizedBox(width: 30,),
                                       CustomRadioButton("Female", 2, Gendeer),
                                     ],
                                   ),
@@ -443,7 +448,226 @@ class _AddNewState extends State<AddNew> {
                     ),
                   ),
                 ),
-              if(currentIndex==1) 
+                if( currentIndex == 1)
+               FadeInDown(
+                  delay: Duration(microseconds: 500),
+                  child: Center(
+                    child: Column(
+                      children: [
+                        Container(
+                          padding: EdgeInsets.all(20),
+                          child: Form(
+                            child: Column(
+                              children: [
+                                TextFormField(
+                                  decoration: InputDecoration(
+                                    prefixIcon: Icon(
+                                      Icons.person,
+                                      color: Color.fromARGB(255, 12, 51, 113),
+                                    ),
+                                    labelText: "Username",
+                                    enabledBorder: UnderlineInputBorder(
+                                      borderSide: BorderSide(
+                                          color: Colors.grey, width: 4),
+                                    ),
+                                    focusedBorder: UnderlineInputBorder(
+                                      borderSide: BorderSide(
+                                          color:
+                                              Color.fromARGB(255, 12, 51, 113),
+                                          width: 5),
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 15,
+                                ),
+                                TextFormField(
+                                  decoration: InputDecoration(
+                                    prefixIcon: Icon(
+                                      Icons.email,
+                                      color: Color.fromARGB(255, 12, 51, 113),
+                                    ),
+                                    labelText: "Email",
+                                    enabledBorder: UnderlineInputBorder(
+                                      borderSide: BorderSide(
+                                          color: Colors.grey, width: 4),
+                                    ),
+                                    disabledBorder: UnderlineInputBorder(
+                                      borderSide: BorderSide(
+                                          color: Colors.black, width: 5),
+                                    ),
+                                    focusedBorder: UnderlineInputBorder(
+                                      borderSide: BorderSide(
+                                          color:
+                                              Color.fromARGB(255, 12, 51, 113),
+                                          width: 5),
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 15,
+                                ),
+                                TextFormField(
+                                  decoration: InputDecoration(
+                                    prefixIcon: Icon(
+                                      Icons.lock_outline_rounded,
+                                      color: Color.fromARGB(255, 12, 51, 113),
+                                    ),
+                                    labelText: "Password",
+                                    enabledBorder: UnderlineInputBorder(
+                                      borderSide: BorderSide(
+                                          color: Colors.grey, width: 4),
+                                    ),
+                                    focusedBorder: UnderlineInputBorder(
+                                      borderSide: BorderSide(
+                                          color:
+                                              Color.fromARGB(255, 12, 51, 113),
+                                          width: 5),
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                TextField(
+                                  cursorColor: Color(0xFFcb1772),
+                                  controller: dateinput,
+                                  decoration: InputDecoration(
+                                    prefixIcon: Icon(
+                                      Icons.calendar_today_rounded,
+                                      color: Color.fromARGB(255, 12, 51, 113),
+                                    ),
+                                    labelText: "Enter Date",
+                                    enabledBorder: UnderlineInputBorder(
+                                      borderSide: BorderSide(
+                                          color: Colors.grey, width: 4),
+                                    ),
+                                    focusedBorder: UnderlineInputBorder(
+                                      borderSide: BorderSide(
+                                          color:
+                                              Color.fromARGB(255, 12, 51, 113),
+                                          width: 5),
+                                    ),
+                                  ),
+                                  readOnly: true,
+                                  onTap: () async {
+                                    DateTime? pickedDate = await showDatePicker(
+                                        context: context,
+                                        initialDate: DateTime.now(),
+                                        firstDate: DateTime(1900),
+                                        lastDate: DateTime(3000));
+
+                                    if (pickedDate != null) {
+                                      print(pickedDate);
+                                      String formattedDate =
+                                          DateFormat('yyyy-MM-dd')
+                                              .format(pickedDate);
+                                      print(formattedDate);
+
+                                      setState(() {
+                                        dateinput.text = formattedDate;
+                                      });
+                                    } else {
+                                      print("Date is not selected");
+                                    }
+                                  },
+                                ),
+                                SizedBox(
+                                  height: 15,
+                                ),
+                                TextFormField(
+                                  decoration: InputDecoration(
+                                    prefixIcon: Icon(
+                                      FontAwesome.address_book,
+                                      color: Color.fromARGB(255, 12, 51, 113),
+                                    ),
+                                    labelText: "Address",
+                                    enabledBorder: UnderlineInputBorder(
+                                      borderSide: BorderSide(
+                                          color: Colors.grey, width: 4),
+                                    ),
+                                    focusedBorder: UnderlineInputBorder(
+                                      borderSide: BorderSide(
+                                          color:
+                                              Color.fromARGB(255, 12, 51, 113),
+                                          width: 5),
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 15,
+                                ),
+                                Container(
+                                  margin: EdgeInsets.only(left: 75, top: 5),
+                                  height: 45,
+                                  child: Row(                                  
+                                    children: [
+                                      CustomRadioButton("Male", 1, Gendeer),
+                                      SizedBox(width: 30,),
+                                      CustomRadioButton("Female", 2, Gendeer),
+                                    ],
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 15,
+                                ),
+                                Stack(
+                                  children: [
+                                    InternationalPhoneNumberInput(
+                                      inputDecoration: InputDecoration(
+                                        prefixIcon: Icon(
+                                          FontAwesome.phone,
+                                          color:
+                                              Color.fromARGB(255, 12, 51, 113),
+                                        ),
+                                        labelText: "Phone number",
+                                        enabledBorder: UnderlineInputBorder(
+                                          borderSide: BorderSide(
+                                              color: Colors.grey, width: 4),
+                                        ),
+                                        focusedBorder: UnderlineInputBorder(
+                                          borderSide: BorderSide(
+                                              color: Color.fromARGB(
+                                                  255, 12, 51, 113),
+                                              width: 5),
+                                        ),
+                                      ),
+                                      cursorColor:
+                                          Color.fromARGB(255, 12, 51, 113),
+                                      textFieldController: PhoneN,
+                                      onInputChanged: (PhoneNumber number) {
+                                        print(number.phoneNumber);
+                                      },
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 40,
+                                ),
+                                Container(
+                                  child: ElevatedButton(
+                                    child: Text("ADD"),
+                                    onPressed: () {},
+                                    style: ElevatedButton.styleFrom(
+                                      minimumSize: Size(150, 40),
+                                      primary: Color.fromARGB(255, 12, 51, 113),
+                                      onPrimary: Colors.white,
+                                      padding: EdgeInsets.all(10),
+                                      textStyle: TextStyle(
+                                        fontSize: 18,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              if(currentIndex==3) 
               FadeInDown(
                   delay: Duration(microseconds: 500),
                   child: Center(
