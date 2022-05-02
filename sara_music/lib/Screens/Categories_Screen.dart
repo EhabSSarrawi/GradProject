@@ -30,7 +30,7 @@ class Categories_ScreenState extends State<Categories_Screen> {
                     height: 25,
                   ),
                   onTap: () {
-                    Navigator.of(context).pushNamed("Bottom_bar");
+                    Navigator.of(context).pop();
                   },
                 ),
                 SizedBox(
