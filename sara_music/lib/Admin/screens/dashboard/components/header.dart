@@ -1,5 +1,3 @@
-import 'package:sara_music/Admin/screens/home/components/side_menu.dart';
-
 import '../../../../responsive.dart';
 import '../../../core/constants/color_constants.dart';
 
@@ -15,14 +13,6 @@ class Header extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        if (!Responsive.isDesktop(context))
-          IconButton(
-            icon: Icon(Icons.menu),
-            onPressed: () {
-              Navigator.push(context, MaterialPageRoute(
-                                builder: (context) => SideMenu()));
-            },
-          ),
         if (!Responsive.isMobile(context))
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -79,7 +69,6 @@ class ProfileCard extends StatelessWidget {
                   const EdgeInsets.symmetric(horizontal: defaultPadding / 2),
               child: Text("Ehab Sarrawi"),
             ),
-          
         ],
       ),
     );
@@ -102,12 +91,8 @@ class SearchField extends StatelessWidget {
           borderSide: BorderSide.none,
           borderRadius: const BorderRadius.all(Radius.circular(10)),
         ),
-        suffixIcon: InkWell(
-          onTap: () {},
-            child: Icon(Icons.search)
-          ),
-        ),
-      
+        suffixIcon: InkWell(onTap: () {}, child: Icon(Icons.search)),
+      ),
     );
   }
 }

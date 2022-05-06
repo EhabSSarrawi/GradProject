@@ -7,10 +7,46 @@ import '../../../models/recent_user_model.dart';
 import 'package:colorize_text_avatar/colorize_text_avatar.dart';
 import 'package:flutter/material.dart';
 
-class RecentUsers extends StatelessWidget {
+class RecentUsers extends StatefulWidget {
   const RecentUsers({
     Key? key,
   }) : super(key: key);
+
+  @override
+  State<RecentUsers> createState() => _RecentUsersState();
+}
+
+class _RecentUsersState extends State<RecentUsers> {
+  String? selectedValue;
+  String? selectedValue1;
+  String? selectedValue2;
+  List<String> items = [
+    'Username',
+    'Course',
+    'Address',
+    'PhoneNumber',
+  ];
+  List<String> Courses = [
+    'Violin',
+    'Piano',
+    'Guitar',
+    'Oud',
+    'Voice',
+  ];
+  List<String> Teachers = [
+    'Mohammad',
+    'Adel',
+    'Amr',
+    'Fadi',
+    'Luai',
+  ];
+  @override
+  void initState() {
+    super.initState();
+    selectedValue = items[0];
+    selectedValue1 = Courses[0];
+    selectedValue2 = Teachers[0];
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -69,180 +105,381 @@ class RecentUsers extends StatelessWidget {
       ),
     );
   }
-}
 
-DataRow recentUserDataRow(RecentUser userInfo, BuildContext context) {
-  ;
-  return DataRow(
-    cells: [
-      DataCell(
-        Row(
-          children: [
-            TextAvatar(
-              size: 35,
-              backgroundColor: Colors.white,
-              textColor: Colors.white,
-              fontSize: 14,
-              upperCase: true,
-              numberLetters: 1,
-              shape: Shape.Rectangle,
-              text: userInfo.name!,
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
-              child: Text(
-                userInfo.name!,
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
+  DataRow recentUserDataRow(RecentUser userInfo, BuildContext context) {
+    return DataRow(
+      cells: [
+        DataCell(
+          Row(
+            children: [
+              TextAvatar(
+                size: 35,
+                backgroundColor: Colors.white,
+                textColor: Colors.white,
+                fontSize: 14,
+                upperCase: true,
+                numberLetters: 1,
+                shape: Shape.Rectangle,
+                text: userInfo.name!,
               ),
-            ),
-          ],
-        ),
-      ),
-      DataCell(Container(
-          padding: EdgeInsets.all(5),
-          decoration: BoxDecoration(
-            color: getRoleColor(userInfo.role).withOpacity(.2),
-            border: Border.all(color: getRoleColor(userInfo.role)),
-            borderRadius: BorderRadius.all(Radius.circular(5.0) //
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
+                child: Text(
+                  userInfo.name!,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                 ),
+              ),
+            ],
           ),
-          child: Text(userInfo.role!))),
-      DataCell(Text(userInfo.email!)),
-      DataCell(Text(userInfo.date!)),
-      DataCell(Text(userInfo.posts!)),
-      DataCell(
-        Row(
-          children: [
-            ElevatedButton.icon(
-              style: ElevatedButton.styleFrom(
-                primary: Colors.blue.withOpacity(0.5),
-              ),
-              icon: Icon(
-                Icons.edit,
-                size: 14,
-              ),
-              onPressed: () {
-                showDialog(
-                    context: context,
-                    builder: (_) {
-                      return AlertDialog(
-                          title: Center(
-                            child: Text("Edit user Info"),
-                          ),
-                          content: Container(
-                            color: secondaryColor,
-                            height: 200,
-                            child: Column(
-                              children: [
-                                SizedBox(
-                                  height: 10,
-                                ),
-                                
-                                SizedBox(
-                                  height: 16,
-                                ),
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    ElevatedButton.icon(
-                                        icon: Icon(
-                                          Icons.edit,
-                                          size: 14,
-                                        ),
-                                        style: ElevatedButton.styleFrom(
-                                            primary: Colors.blue),
-                                        onPressed: () {},
-                                        label: Text("Edit")),
-                                    SizedBox(
-                                      width: 20,
-                                    ),
-                                    ElevatedButton.icon(
-                                        icon: Icon(
-                                          Icons.close,
-                                          size: 14,
-                                        ),
-                                        style: ElevatedButton.styleFrom(
-                                            primary: Colors.grey),
-                                        onPressed: () {
-                                          Navigator.of(context).pop();
-                                        },
-                                        label: Text("Cancel")),
-                                  ],
-                                )
-                              ],
-                            ),
-                          ));
-                    });
-              },
-              // Edit
-              label: Text("Edit"),
-            ),
-            SizedBox(
-              width: 6,
-            ),
-            ElevatedButton.icon(
-              style: ElevatedButton.styleFrom(
-                primary: Colors.red.withOpacity(0.5),
-              ),
-              icon: Icon(Icons.delete),
-              onPressed: () {
-                showDialog(
-                    context: context,
-                    builder: (_) {
-                      return AlertDialog(
-                          title: Center(
-                            child: Text("Confirm Deletion"),
-                          ),
-                          content: Container(
-                            color: secondaryColor,
-                            height: 120,
-                            child: Column(
-                              children: [
-                                Text(
-                                    "Are you sure want to delete '${userInfo.name}'?"),
-                                SizedBox(
-                                  height: 16,
-                                ),
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    ElevatedButton.icon(
-                                        icon: Icon(
-                                          Icons.delete,
-                                          size: 14,
-                                        ),
-                                        style: ElevatedButton.styleFrom(
-                                            primary: Colors.red),
-                                        onPressed: () {},
-                                        label: Text("Delete")),
-                                    SizedBox(
-                                      width: 20,
-                                    ),
-                                    ElevatedButton.icon(
-                                        icon: Icon(
-                                          Icons.close,
-                                          size: 14,
-                                        ),
-                                        style: ElevatedButton.styleFrom(
-                                            primary: Colors.grey),
-                                        onPressed: () {
-                                          Navigator.of(context).pop();
-                                        },
-                                        label: Text("Cancel")),
-                                  ],
-                                )
-                              ],
-                            ),
-                          ));
-                    });
-              },
-              // Delete
-              label: Text("Delete"),
-            ),
-          ],
         ),
-      ),
-    ],
-  );
+        DataCell(Container(
+            padding: EdgeInsets.all(5),
+            decoration: BoxDecoration(
+              color: getRoleColor(userInfo.role).withOpacity(.2),
+              border: Border.all(color: getRoleColor(userInfo.role)),
+              borderRadius: BorderRadius.all(Radius.circular(5.0) //
+                  ),
+            ),
+            child: Text(userInfo.role!))),
+        DataCell(Text(userInfo.email!)),
+        DataCell(Text(userInfo.date!)),
+        DataCell(Text(userInfo.posts!)),
+        DataCell(
+          Row(
+            children: [
+              ElevatedButton.icon(
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.blue.withOpacity(0.5),
+                ),
+                icon: Icon(
+                  Icons.edit,
+                  size: 14,
+                ),
+                onPressed: () {
+                  showDialog(
+                      context: context,
+                      builder: (_) {
+                        return AlertDialog(
+                          alignment: Alignment.center,
+                          contentPadding: EdgeInsets.all(5),
+                          insetPadding: EdgeInsets.all(5),
+                            title: Center(
+                              child: Text("Edit Student Info"),
+                            ),
+                            content: Container(
+                              color: secondaryColor,
+                              height: 300,
+                              width: 300,
+                              child: Column(
+                                children: [
+                                  SizedBox(
+                                    height: 30,
+                                  ),
+                                  Container(
+                                    child: DropdownButtonHideUnderline(
+                                      child: DropdownButton2(
+                                        isExpanded: true,
+                                        hint: Row(
+                                          children: const [
+                                            Icon(
+                                              Icons.list,
+                                              size: 22,
+                                              color: Color.fromARGB(
+                                                  255, 12, 51, 113),
+                                            ),
+                                            SizedBox(
+                                              width: 4,
+                                            ),
+                                            Expanded(
+                                              child: Text(
+                                                'Select',
+                                                style: TextStyle(
+                                                  fontSize: 16,
+                                                  color: Color.fromARGB(
+                                                      255, 66, 66, 66),
+                                                ),
+                                                overflow: TextOverflow.ellipsis,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        items: items
+                                            .map((item) =>
+                                                DropdownMenuItem<String>(
+                                                  value: item,
+                                                  child: Text(
+                                                    item,
+                                                    style: const TextStyle(
+                                                      fontSize: 14,
+                                                      color: Colors.black,
+                                                    ),
+                                                    overflow:
+                                                        TextOverflow.ellipsis,
+                                                  ),
+                                                ))
+                                            .toList(),
+                                        value: selectedValue,
+                                        onChanged: (value) {
+                                          setState(() {
+                                            selectedValue = value as String?;
+                                          });
+                                        },
+                                        icon: const Icon(
+                                          Icons.arrow_forward_ios_outlined,
+                                        ),
+                                        iconSize: 14,
+                                        iconEnabledColor:
+                                            Color.fromARGB(255, 12, 51, 113),
+                                        iconDisabledColor: Colors.grey,
+                                        buttonHeight: 60,
+                                        buttonWidth: 160,
+                                        buttonPadding: const EdgeInsets.only(
+                                            left: 14, right: 14),
+                                        buttonDecoration: BoxDecoration(
+                                          // borderRadius: BorderRadius.circular(14),
+                                          border: Border.all(
+                                            color: Colors.black26,
+                                          ),
+                                          color: Color.fromARGB(
+                                              255, 231, 241, 241),
+                                        ),
+                                        buttonElevation: 2,
+                                        itemHeight: 40,
+                                        itemPadding: const EdgeInsets.symmetric(
+                                            horizontal: 14),
+                                        dropdownMaxHeight: 200,
+                                        dropdownWidth: 200,
+                                        dropdownPadding: null,
+                                        dropdownDecoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(14),
+                                          color: Color.fromARGB(
+                                              255, 231, 241, 241),
+                                        ),
+                                        dropdownElevation: 8,
+                                        scrollbarRadius:
+                                            const Radius.circular(40),
+                                        scrollbarThickness: 6,
+                                        scrollbarAlwaysShow: true,
+                                        offset: const Offset(-20, 0),
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 16,
+                                  ),
+                                  selectedValue == "Course"
+                                      ? Row(
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Center(
+                                              child: DropdownButtonHideUnderline(
+                                                child: DropdownButton2(
+                                                  hint: Text(
+                                                    'Select Item',
+                                                    style: TextStyle(
+                                                      fontSize: 14,
+                                                      color: Theme.of(context)
+                                                          .hintColor,
+                                                    ),
+                                                  ),
+                                                  items: Courses.map((item) =>
+                                                      DropdownMenuItem<String>(
+                                                        value: item,
+                                                        child: Text(
+                                                          item,
+                                                          style: const TextStyle(
+                                                            fontSize: 14,
+                                                          ),
+                                                        ),
+                                                      )).toList(),
+                                                  value: selectedValue1,
+                                                  onChanged: (value) {
+                                                    setState(() {
+                                                      selectedValue1 =
+                                                          value as String;
+                                                    });
+                                                  },
+                                                  dropdownPadding: null,
+                                                  dropdownWidth: 100,                                               
+                                                  buttonHeight: 40,
+                                                  buttonWidth: 140,
+                                                  itemHeight: 40,
+                                                ),
+                                              ),
+                                            ),
+                                            Center(
+                                              child: DropdownButtonHideUnderline(
+                                                child: DropdownButton2(
+                                                  hint: Text(
+                                                    'Select Teacher',
+                                                    style: TextStyle(
+                                                      fontSize: 14,
+                                                      color: Theme.of(context)
+                                                          .hintColor,
+                                                    ),
+                                                  ),
+                                                  items: Teachers.map((item) =>
+                                                      DropdownMenuItem<String>(
+                                                        value: item,
+                                                        child: Text(
+                                                          item,
+                                                          style: const TextStyle(
+                                                            fontSize: 14,
+                                                          ),
+                                                        ),
+                                                      )).toList(),
+                                                  value: selectedValue2,
+                                                  onChanged: (value) {
+                                                    setState(() {
+                                                      selectedValue2 =
+                                                          value as String;
+                                                    });
+                                                  },
+                                                  dropdownPadding: null,
+                                                  dropdownWidth: 100,
+                                                  buttonHeight: 40,
+                                                  buttonWidth: 140,
+                                                  itemHeight: 40,
+                                                ),
+                                              ),
+                                            ),
+                                        ],
+                                      )
+                                      : Container(
+                                          padding: EdgeInsets.all(15),
+                                          child: Form(
+                                            child: TextFormField(
+                                              decoration: InputDecoration(
+                                                prefixIcon: Icon(
+                                                  Icons.data_array_outlined,
+                                                  color: Color.fromARGB(
+                                                      255, 12, 51, 113),
+                                                ),
+                                                labelText: "$selectedValue",
+                                                enabledBorder:
+                                                    UnderlineInputBorder(
+                                                  borderSide: BorderSide(
+                                                      color: Colors.grey,
+                                                      width: 4),
+                                                ),
+                                                focusedBorder:
+                                                    UnderlineInputBorder(
+                                                  borderSide: BorderSide(
+                                                      color: Color.fromARGB(
+                                                          255, 12, 51, 113),
+                                                      width: 5),
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                  SizedBox(
+                                    height: 20,
+                                  ),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      ElevatedButton.icon(
+                                          icon: Icon(
+                                            Icons.edit,
+                                            size: 14,
+                                          ),
+                                          style: ElevatedButton.styleFrom(
+                                              primary: Colors.blue),
+                                          onPressed: () {},
+                                          label: Text("Edit")),
+                                      SizedBox(
+                                        width: 20,
+                                      ),
+                                      ElevatedButton.icon(
+                                          icon: Icon(
+                                            Icons.close,
+                                            size: 14,
+                                          ),
+                                          style: ElevatedButton.styleFrom(
+                                              primary: Colors.grey),
+                                          onPressed: () {
+                                            Navigator.of(context).pop();
+                                          },
+                                          label: Text("Cancel")),
+                                    ],
+                                  )
+                                ],
+                              ),
+                            ));
+                      });
+                },
+                // Edit
+                label: Text("Edit"),
+              ),
+              SizedBox(
+                width: 6,
+              ),
+              ElevatedButton.icon(
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.red.withOpacity(0.5),
+                ),
+                icon: Icon(Icons.delete),
+                onPressed: () {
+                  showDialog(
+                      context: context,
+                      builder: (_) {
+                        return AlertDialog(
+                            title: Center(
+                              child: Text("Confirm Deletion"),
+                            ),
+                            content: Container(
+                              color: secondaryColor,
+                              height: 120,
+                              child: Column(
+                                children: [
+                                  Text(
+                                      "Are you sure want to delete '${userInfo.name}'?"),
+                                  SizedBox(
+                                    height: 16,
+                                  ),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      ElevatedButton.icon(
+                                          icon: Icon(
+                                            Icons.delete,
+                                            size: 14,
+                                          ),
+                                          style: ElevatedButton.styleFrom(
+                                              primary: Colors.red),
+                                          onPressed: () {},
+                                          label: Text("Delete")),
+                                      SizedBox(
+                                        width: 20,
+                                      ),
+                                      ElevatedButton.icon(
+                                          icon: Icon(
+                                            Icons.close,
+                                            size: 14,
+                                          ),
+                                          style: ElevatedButton.styleFrom(
+                                              primary: Colors.grey),
+                                          onPressed: () {
+                                            Navigator.of(context).pop();
+                                          },
+                                          label: Text("Cancel")),
+                                    ],
+                                  )
+                                ],
+                              ),
+                            ));
+                      });
+                },
+                // Delete
+                label: Text("Delete"),
+              ),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
 }
