@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "133853437270",
+    "project_id": "notification-7bfdd",
+    "storage_bucket": "notification-7bfdd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:133853437270:android:472c39af1c2353b42b4af7",
+        "android_client_info": {
+          "package_name": "com.example.sara_music"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "133853437270-rtijml715i40mu87knkjvj0287vr09fq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmaRns55uhE79sYcgbSm032TM8UEY_YGQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "133853437270-rtijml715i40mu87knkjvj0287vr09fq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

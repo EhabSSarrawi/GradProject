@@ -52,16 +52,16 @@
         "source": "C:\\Users\\Ihab\\StudioProjects\\GradProject\\sara_music\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\branding.png"
     },
     {
+        "merged": "C:\\Users\\Ihab\\StudioProjects\\GradProject\\sara_music\\build\\app\\intermediates\\res\\merged\\debug\\drawable-hdpi_branding.png.flat",
+        "source": "C:\\Users\\Ihab\\StudioProjects\\GradProject\\sara_music\\android\\app\\src\\main\\res\\drawable-hdpi\\branding.png"
+    },
+    {
         "merged": "C:\\Users\\Ihab\\StudioProjects\\GradProject\\sara_music\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\Ihab\\StudioProjects\\GradProject\\sara_music\\android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
         "merged": "C:\\Users\\Ihab\\StudioProjects\\GradProject\\sara_music\\build\\app\\intermediates\\res\\merged\\debug\\drawable-v21_background.png.flat",
         "source": "C:\\Users\\Ihab\\StudioProjects\\GradProject\\sara_music\\android\\app\\src\\main\\res\\drawable-v21\\background.png"
-    },
-    {
-        "merged": "C:\\Users\\Ihab\\StudioProjects\\GradProject\\sara_music\\build\\app\\intermediates\\res\\merged\\debug\\drawable-hdpi_branding.png.flat",
-        "source": "C:\\Users\\Ihab\\StudioProjects\\GradProject\\sara_music\\android\\app\\src\\main\\res\\drawable-hdpi\\branding.png"
     },
     {
         "merged": "C:\\Users\\Ihab\\StudioProjects\\GradProject\\sara_music\\build\\app\\intermediates\\res\\merged\\debug\\drawable-mdpi_branding.png.flat",

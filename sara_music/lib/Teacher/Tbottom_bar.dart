@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../Screens/MyDrawer.dart';
+import 'TBreak.dart';
 import 'TSchedule.dart';
 import 'THomepage.dart';
 import 'TSearch.dart';
@@ -23,6 +24,9 @@ class Tbottom_barState extends State<Tbottom_bar> {
     },
     {
       'page': TSearch(),
+    },
+    {
+      'page': TBreak(),
     },
     {
       'page': TProfile(),
@@ -78,6 +82,7 @@ class Tbottom_barState extends State<Tbottom_bar> {
                     icon: Icon(FontAwesomeIcons.search,size: 20,),       
                     activeIcon: Icon(FontAwesomeIcons.search,),            
                     label: "Search"),
+                BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.calendarAlt),activeIcon:Icon(FontAwesomeIcons.calendarTimes) ,label: "Break"),
                 BottomNavigationBarItem(
                   icon: Icon(FontAwesomeIcons.user),
                     activeIcon: Icon(FontAwesomeIcons.userAlt), 

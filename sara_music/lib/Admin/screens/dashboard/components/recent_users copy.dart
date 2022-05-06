@@ -1,3 +1,5 @@
+import 'package:dropdown_button2/dropdown_button2.dart';
+
 import '../../../core/constants/color_constants.dart';
 
 import '../../../core/utils/colorful_tag.dart';
@@ -29,12 +31,11 @@ class RecentUsers extends StatelessWidget {
             scrollDirection: Axis.vertical,
             child: SizedBox(
               width: double.infinity,
-              child:  SingleChildScrollView(
+              child: SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: DataTable(
                   horizontalMargin: 0,
                   showCheckboxColumn: true,
-                  
                   columnSpacing: defaultPadding,
                   columns: [
                     DataColumn(
@@ -71,10 +72,10 @@ class RecentUsers extends StatelessWidget {
 }
 
 DataRow recentUserDataRow(RecentUser userInfo, BuildContext context) {
+  ;
   return DataRow(
     cells: [
       DataCell(
-        
         Row(
           children: [
             TextAvatar(
@@ -121,13 +122,65 @@ DataRow recentUserDataRow(RecentUser userInfo, BuildContext context) {
                 Icons.edit,
                 size: 14,
               ),
-              onPressed: () {},
+              onPressed: () {
+                showDialog(
+                    context: context,
+                    builder: (_) {
+                      return AlertDialog(
+                          title: Center(
+                            child: Text("Edit user Info"),
+                          ),
+                          content: Container(
+                            color: secondaryColor,
+                            height: 200,
+                            child: Column(
+                              children: [
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                
+                                SizedBox(
+                                  height: 16,
+                                ),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    ElevatedButton.icon(
+                                        icon: Icon(
+                                          Icons.edit,
+                                          size: 14,
+                                        ),
+                                        style: ElevatedButton.styleFrom(
+                                            primary: Colors.blue),
+                                        onPressed: () {},
+                                        label: Text("Edit")),
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    ElevatedButton.icon(
+                                        icon: Icon(
+                                          Icons.close,
+                                          size: 14,
+                                        ),
+                                        style: ElevatedButton.styleFrom(
+                                            primary: Colors.grey),
+                                        onPressed: () {
+                                          Navigator.of(context).pop();
+                                        },
+                                        label: Text("Cancel")),
+                                  ],
+                                )
+                              ],
+                            ),
+                          ));
+                    });
+              },
               // Edit
               label: Text("Edit"),
             ),
             SizedBox(
               width: 6,
-            ),            
+            ),
             ElevatedButton.icon(
               style: ElevatedButton.styleFrom(
                 primary: Colors.red.withOpacity(0.5),
@@ -143,7 +196,7 @@ DataRow recentUserDataRow(RecentUser userInfo, BuildContext context) {
                           ),
                           content: Container(
                             color: secondaryColor,
-                            height: 100,
+                            height: 120,
                             child: Column(
                               children: [
                                 Text(
@@ -156,6 +209,18 @@ DataRow recentUserDataRow(RecentUser userInfo, BuildContext context) {
                                   children: [
                                     ElevatedButton.icon(
                                         icon: Icon(
+                                          Icons.delete,
+                                          size: 14,
+                                        ),
+                                        style: ElevatedButton.styleFrom(
+                                            primary: Colors.red),
+                                        onPressed: () {},
+                                        label: Text("Delete")),
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    ElevatedButton.icon(
+                                        icon: Icon(
                                           Icons.close,
                                           size: 14,
                                         ),
@@ -165,18 +230,6 @@ DataRow recentUserDataRow(RecentUser userInfo, BuildContext context) {
                                           Navigator.of(context).pop();
                                         },
                                         label: Text("Cancel")),
-                                    SizedBox(
-                                      width: 20,
-                                    ),
-                                    ElevatedButton.icon(
-                                        icon: Icon(
-                                          Icons.delete,
-                                          size: 14,
-                                        ),
-                                        style: ElevatedButton.styleFrom(
-                                            primary: Colors.red),
-                                        onPressed: () {},
-                                        label: Text("Delete"))
                                   ],
                                 )
                               ],

@@ -14,83 +14,355 @@
 14    <uses-permission android:name="android.permission.INTERNET" />
 14-->C:\Users\Ihab\StudioProjects\GradProject\sara_music\android\app\src\debug\AndroidManifest.xml:6:5-66
 14-->C:\Users\Ihab\StudioProjects\GradProject\sara_music\android\app\src\debug\AndroidManifest.xml:6:22-64
-15    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-15-->[:image_picker] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-80
-15-->[:image_picker] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:7:22-77
-16    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-16-->[:image_picker] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:8:5-81
-16-->[:image_picker] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:8:22-78
-17
-18    <application
-19        android:name="android.app.Application"
-20        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-20-->[androidx.core:core:1.6.0] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\122df2e57d294d1a53db26bbc3b813c1\core-1.6.0\AndroidManifest.xml:24:18-86
-21        android:debuggable="true"
-22        android:icon="@mipmap/ic_launcher"
-23        android:label="sara_music" >
-24        <activity
-25            android:name="com.example.sara_music.MainActivity"
-26            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-27            android:exported="true"
-28            android:hardwareAccelerated="true"
-29            android:launchMode="singleTop"
-30            android:theme="@style/LaunchTheme"
-31            android:windowSoftInputMode="adjustResize" >
-32
-33            <!--
-34                 Specifies an Android theme to apply to this Activity as soon as
-35                 the Android process has started. This theme is visible to the user
-36                 while the Flutter UI initializes. After that, this theme continues
-37                 to determine the Window background behind the Flutter UI.
-38            -->
-39            <meta-data
-40                android:name="io.flutter.embedding.android.NormalTheme"
-41                android:resource="@style/NormalTheme" />
-42
-43            <intent-filter>
-44                <action android:name="android.intent.action.MAIN" />
-45
-46                <category android:name="android.intent.category.LAUNCHER" />
-47            </intent-filter>
-48        </activity>
-49        <!--
-50             Don't delete the meta-data below.
-51             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
-52        -->
-53        <meta-data
-54            android:name="flutterEmbedding"
-55            android:value="2" />
-56
-57        <provider
-57-->[:image_picker] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:11:9-19:20
-58            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
-58-->[:image_picker] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:12:13-82
-59            android:authorities="com.example.sara_music.flutter.image_provider"
-59-->[:image_picker] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-74
-60            android:exported="false"
-60-->[:image_picker] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-37
-61            android:grantUriPermissions="true" >
-61-->[:image_picker] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-47
-62            <meta-data
-62-->[:image_picker] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:16:13-18:75
-63                android:name="android.support.FILE_PROVIDER_PATHS"
-63-->[:image_picker] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:17:17-67
-64                android:resource="@xml/flutter_image_picker_file_paths" />
-64-->[:image_picker] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:18:17-72
-65        </provider>
-66
-67        <uses-library
-67-->[androidx.window:window:1.0.0-beta04] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\03c633e46d75bfb21f082f0417f55161\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
-68            android:name="androidx.window.extensions"
-68-->[androidx.window:window:1.0.0-beta04] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\03c633e46d75bfb21f082f0417f55161\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
-69            android:required="false" />
-69-->[androidx.window:window:1.0.0-beta04] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\03c633e46d75bfb21f082f0417f55161\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
-70        <uses-library
-70-->[androidx.window:window:1.0.0-beta04] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\03c633e46d75bfb21f082f0417f55161\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
-71            android:name="androidx.window.sidecar"
-71-->[androidx.window:window:1.0.0-beta04] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\03c633e46d75bfb21f082f0417f55161\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
-72            android:required="false" />
-72-->[androidx.window:window:1.0.0-beta04] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\03c633e46d75bfb21f082f0417f55161\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
-73    </application>
-74
-75</manifest>
+15    <uses-permission android:name="android.permission.WAKE_LOCK" />
+15-->[:firebase_messaging] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:8:5-68
+15-->[:firebase_messaging] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:8:22-65
+16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+16-->[:firebase_messaging] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:9:5-79
+16-->[:firebase_messaging] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:9:22-76
+17    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+17-->[:image_picker] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-80
+17-->[:image_picker] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:7:22-77
+18    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+18-->[:image_picker] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:8:5-81
+18-->[:image_picker] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:8:22-78
+19    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+19-->[:flutter_local_notifications] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-81
+19-->[:flutter_local_notifications] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:7:22-78
+20    <uses-permission android:name="android.permission.VIBRATE" />
+20-->[:flutter_local_notifications] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:8:5-66
+20-->[:flutter_local_notifications] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:8:22-63
+21    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+21-->[:flutter_local_notifications] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:9:5-81
+21-->[:flutter_local_notifications] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:9:22-78
+22    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+22-->[:flutter_local_notifications] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:10:5-79
+22-->[:flutter_local_notifications] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:10:22-76
+23    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+23-->[com.google.firebase:firebase-messaging:23.0.3] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\d3935466f97d4c694b17575b5be32973\jetified-firebase-messaging-23.0.3\AndroidManifest.xml:28:5-82
+23-->[com.google.firebase:firebase-messaging:23.0.3] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\d3935466f97d4c694b17575b5be32973\jetified-firebase-messaging-23.0.3\AndroidManifest.xml:28:22-79
+24    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+24-->[com.google.android.gms:play-services-measurement-api:20.1.2] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\af45d33866097ccc6ff6d19ce0ae1c7c\jetified-play-services-measurement-api-20.1.2\AndroidManifest.xml:25:5-79
+24-->[com.google.android.gms:play-services-measurement-api:20.1.2] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\af45d33866097ccc6ff6d19ce0ae1c7c\jetified-play-services-measurement-api-20.1.2\AndroidManifest.xml:25:22-76
+25    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+25-->[com.google.android.gms:play-services-measurement:20.1.2] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\8cd43dcd3ab89a39289ec50fb78806d2\jetified-play-services-measurement-20.1.2\AndroidManifest.xml:26:5-110
+25-->[com.google.android.gms:play-services-measurement:20.1.2] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\8cd43dcd3ab89a39289ec50fb78806d2\jetified-play-services-measurement-20.1.2\AndroidManifest.xml:26:22-107
+26
+27    <application
+28        android:name="android.app.Application"
+29        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+29-->[androidx.core:core:1.6.0] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\875654acb8fd75501dc33efa1bebb479\core-1.6.0\AndroidManifest.xml:24:18-86
+30        android:debuggable="true"
+31        android:icon="@mipmap/ic_launcher"
+32        android:label="sara_music" >
+33        <activity
+34            android:name="com.example.sara_music.MainActivity"
+35            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+36            android:exported="true"
+37            android:hardwareAccelerated="true"
+38            android:launchMode="singleTop"
+39            android:theme="@style/LaunchTheme"
+40            android:windowSoftInputMode="adjustResize" >
+41
+42            <!--
+43                 Specifies an Android theme to apply to this Activity as soon as
+44                 the Android process has started. This theme is visible to the user
+45                 while the Flutter UI initializes. After that, this theme continues
+46                 to determine the Window background behind the Flutter UI.
+47            -->
+48            <meta-data
+49                android:name="io.flutter.embedding.android.NormalTheme"
+50                android:resource="@style/NormalTheme" />
+51
+52            <intent-filter>
+53                <action android:name="android.intent.action.MAIN" />
+54
+55                <category android:name="android.intent.category.LAUNCHER" />
+56            </intent-filter>
+57        </activity>
+58        <!--
+59             Don't delete the meta-data below.
+60             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+61        -->
+62        <meta-data
+63            android:name="flutterEmbedding"
+64            android:value="2" />
+65
+66        <service
+66-->[:firebase_messaging] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-15:72
+67            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingBackgroundService"
+67-->[:firebase_messaging] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-107
+68            android:exported="false"
+68-->[:firebase_messaging] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-37
+69            android:permission="android.permission.BIND_JOB_SERVICE" />
+69-->[:firebase_messaging] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-69
+70        <service
+70-->[:firebase_messaging] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:16:9-22:19
+71            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingService"
+71-->[:firebase_messaging] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:17:13-97
+72            android:exported="false" >
+72-->[:firebase_messaging] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:18:13-37
+73            <intent-filter>
+73-->[:firebase_messaging] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:19:13-21:29
+74                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+74-->[:firebase_messaging] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:20:17-78
+74-->[:firebase_messaging] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:20:25-75
+75            </intent-filter>
+76        </service>
+77
+78        <receiver
+78-->[:firebase_messaging] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:24:9-31:20
+79            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingReceiver"
+79-->[:firebase_messaging] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:25:13-98
+80            android:exported="true"
+80-->[:firebase_messaging] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:26:13-36
+81            android:permission="com.google.android.c2dm.permission.SEND" >
+81-->[:firebase_messaging] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:27:13-73
+82            <intent-filter>
+82-->[:firebase_messaging] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:28:13-30:29
+83                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+83-->[:firebase_messaging] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:29:17-81
+83-->[:firebase_messaging] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:29:25-78
+84            </intent-filter>
+85        </receiver>
+86
+87        <service
+87-->[:firebase_messaging] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:33:9-37:19
+88            android:name="com.google.firebase.components.ComponentDiscoveryService"
+88-->[:firebase_messaging] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:33:18-89
+89            android:directBootAware="true"
+89-->[com.google.firebase:firebase-common:20.1.0] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\eb8f2d939ce0af8150b8a3f7bc61f475\jetified-firebase-common-20.1.0\AndroidManifest.xml:35:13-43
+90            android:exported="false" >
+90-->[com.google.firebase:firebase-messaging:23.0.3] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\d3935466f97d4c694b17575b5be32973\jetified-firebase-messaging-23.0.3\AndroidManifest.xml:54:13-37
+91            <meta-data
+91-->[:firebase_messaging] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:34:13-36:85
+92                android:name="com.google.firebase.components:io.flutter.plugins.firebase.messaging.FlutterFirebaseAppRegistrar"
+92-->[:firebase_messaging] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:35:17-128
+93                android:value="com.google.firebase.components.ComponentRegistrar" />
+93-->[:firebase_messaging] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:36:17-82
+94            <meta-data
+94-->[:firebase_core] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
+95                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
+95-->[:firebase_core] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-124
+96                android:value="com.google.firebase.components.ComponentRegistrar" />
+96-->[:firebase_core] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
+97            <meta-data
+97-->[com.google.firebase:firebase-messaging:23.0.3] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\d3935466f97d4c694b17575b5be32973\jetified-firebase-messaging-23.0.3\AndroidManifest.xml:55:13-57:85
+98                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+98-->[com.google.firebase:firebase-messaging:23.0.3] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\d3935466f97d4c694b17575b5be32973\jetified-firebase-messaging-23.0.3\AndroidManifest.xml:56:17-119
+99                android:value="com.google.firebase.components.ComponentRegistrar" />
+99-->[com.google.firebase:firebase-messaging:23.0.3] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\d3935466f97d4c694b17575b5be32973\jetified-firebase-messaging-23.0.3\AndroidManifest.xml:57:17-82
+100            <meta-data
+100-->[com.google.firebase:firebase-datatransport:18.1.2] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\6271c7137602b746178fdf297cc59ec2\jetified-firebase-datatransport-18.1.2\AndroidManifest.xml:28:13-30:85
+101                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+101-->[com.google.firebase:firebase-datatransport:18.1.2] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\6271c7137602b746178fdf297cc59ec2\jetified-firebase-datatransport-18.1.2\AndroidManifest.xml:29:17-115
+102                android:value="com.google.firebase.components.ComponentRegistrar" />
+102-->[com.google.firebase:firebase-datatransport:18.1.2] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\6271c7137602b746178fdf297cc59ec2\jetified-firebase-datatransport-18.1.2\AndroidManifest.xml:30:17-82
+103            <meta-data
+103-->[com.google.android.gms:play-services-measurement-api:20.1.2] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\af45d33866097ccc6ff6d19ce0ae1c7c\jetified-play-services-measurement-api-20.1.2\AndroidManifest.xml:31:13-33:85
+104                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+104-->[com.google.android.gms:play-services-measurement-api:20.1.2] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\af45d33866097ccc6ff6d19ce0ae1c7c\jetified-play-services-measurement-api-20.1.2\AndroidManifest.xml:32:17-139
+105                android:value="com.google.firebase.components.ComponentRegistrar" />
+105-->[com.google.android.gms:play-services-measurement-api:20.1.2] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\af45d33866097ccc6ff6d19ce0ae1c7c\jetified-play-services-measurement-api-20.1.2\AndroidManifest.xml:33:17-82
+106            <meta-data
+106-->[com.google.firebase:firebase-installations:17.0.1] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\75696b8cf80c33699685bc2305e50db4\jetified-firebase-installations-17.0.1\AndroidManifest.xml:18:13-20:85
+107                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+107-->[com.google.firebase:firebase-installations:17.0.1] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\75696b8cf80c33699685bc2305e50db4\jetified-firebase-installations-17.0.1\AndroidManifest.xml:19:17-127
+108                android:value="com.google.firebase.components.ComponentRegistrar" />
+108-->[com.google.firebase:firebase-installations:17.0.1] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\75696b8cf80c33699685bc2305e50db4\jetified-firebase-installations-17.0.1\AndroidManifest.xml:20:17-82
+109        </service>
+110
+111        <provider
+111-->[:firebase_messaging] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:39:9-43:38
+112            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingInitProvider"
+112-->[:firebase_messaging] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:40:13-102
+113            android:authorities="com.example.sara_music.flutterfirebasemessaginginitprovider"
+113-->[:firebase_messaging] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:41:13-88
+114            android:exported="false"
+114-->[:firebase_messaging] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:42:13-37
+115            android:initOrder="99" />
+115-->[:firebase_messaging] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:43:13-35
+116        <provider
+116-->[:image_picker] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:11:9-19:20
+117            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+117-->[:image_picker] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:12:13-82
+118            android:authorities="com.example.sara_music.flutter.image_provider"
+118-->[:image_picker] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-74
+119            android:exported="false"
+119-->[:image_picker] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-37
+120            android:grantUriPermissions="true" >
+120-->[:image_picker] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-47
+121            <meta-data
+121-->[:image_picker] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:16:13-18:75
+122                android:name="android.support.FILE_PROVIDER_PATHS"
+122-->[:image_picker] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:17:17-67
+123                android:resource="@xml/flutter_image_picker_file_paths" />
+123-->[:image_picker] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:18:17-72
+124        </provider>
+125
+126        <receiver
+126-->[:flutter_local_notifications] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:13:9-15:40
+127            android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationReceiver"
+127-->[:flutter_local_notifications] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-97
+128            android:exported="false" />
+128-->[:flutter_local_notifications] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-37
+129        <receiver
+129-->[:flutter_local_notifications] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:16:9-25:20
+130            android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationBootReceiver"
+130-->[:flutter_local_notifications] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:17:13-101
+131            android:exported="false" >
+131-->[:flutter_local_notifications] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:18:13-37
+132            <intent-filter>
+132-->[:flutter_local_notifications] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:19:13-24:29
+133                <action android:name="android.intent.action.BOOT_COMPLETED" />
+133-->[:flutter_local_notifications] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:20:17-79
+133-->[:flutter_local_notifications] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:20:25-76
+134                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+134-->[:flutter_local_notifications] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:21:17-84
+134-->[:flutter_local_notifications] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:21:25-81
+135                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+135-->[:flutter_local_notifications] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:22:17-82
+135-->[:flutter_local_notifications] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:22:25-79
+136                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
+136-->[:flutter_local_notifications] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:23:17-82
+136-->[:flutter_local_notifications] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:23:25-79
+137            </intent-filter>
+138        </receiver>
+139
+140        <uses-library
+140-->[androidx.window:window:1.0.0-beta04] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\9a30143a20a029e68d2a2c8980fee508\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
+141            android:name="androidx.window.extensions"
+141-->[androidx.window:window:1.0.0-beta04] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\9a30143a20a029e68d2a2c8980fee508\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
+142            android:required="false" />
+142-->[androidx.window:window:1.0.0-beta04] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\9a30143a20a029e68d2a2c8980fee508\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
+143        <uses-library
+143-->[androidx.window:window:1.0.0-beta04] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\9a30143a20a029e68d2a2c8980fee508\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
+144            android:name="androidx.window.sidecar"
+144-->[androidx.window:window:1.0.0-beta04] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\9a30143a20a029e68d2a2c8980fee508\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
+145            android:required="false" />
+145-->[androidx.window:window:1.0.0-beta04] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\9a30143a20a029e68d2a2c8980fee508\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
+146
+147        <receiver
+147-->[com.google.firebase:firebase-messaging:23.0.3] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\d3935466f97d4c694b17575b5be32973\jetified-firebase-messaging-23.0.3\AndroidManifest.xml:31:9-38:20
+148            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+148-->[com.google.firebase:firebase-messaging:23.0.3] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\d3935466f97d4c694b17575b5be32973\jetified-firebase-messaging-23.0.3\AndroidManifest.xml:32:13-78
+149            android:exported="true"
+149-->[com.google.firebase:firebase-messaging:23.0.3] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\d3935466f97d4c694b17575b5be32973\jetified-firebase-messaging-23.0.3\AndroidManifest.xml:33:13-36
+150            android:permission="com.google.android.c2dm.permission.SEND" >
+150-->[com.google.firebase:firebase-messaging:23.0.3] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\d3935466f97d4c694b17575b5be32973\jetified-firebase-messaging-23.0.3\AndroidManifest.xml:34:13-73
+151            <intent-filter>
+151-->[:firebase_messaging] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:28:13-30:29
+152                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+152-->[:firebase_messaging] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:29:17-81
+152-->[:firebase_messaging] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:29:25-78
+153            </intent-filter>
+154        </receiver>
+155        <!--
+156             FirebaseMessagingService performs security checks at runtime,
+157             but set to not exported to explicitly avoid allowing another app to call it.
+158        -->
+159        <service
+159-->[com.google.firebase:firebase-messaging:23.0.3] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\d3935466f97d4c694b17575b5be32973\jetified-firebase-messaging-23.0.3\AndroidManifest.xml:44:9-51:19
+160            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+160-->[com.google.firebase:firebase-messaging:23.0.3] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\d3935466f97d4c694b17575b5be32973\jetified-firebase-messaging-23.0.3\AndroidManifest.xml:45:13-82
+161            android:directBootAware="true"
+161-->[com.google.firebase:firebase-messaging:23.0.3] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\d3935466f97d4c694b17575b5be32973\jetified-firebase-messaging-23.0.3\AndroidManifest.xml:46:13-43
+162            android:exported="false" >
+162-->[com.google.firebase:firebase-messaging:23.0.3] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\d3935466f97d4c694b17575b5be32973\jetified-firebase-messaging-23.0.3\AndroidManifest.xml:47:13-37
+163            <intent-filter android:priority="-500" >
+163-->[:firebase_messaging] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:19:13-21:29
+164                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+164-->[:firebase_messaging] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:20:17-78
+164-->[:firebase_messaging] C:\Users\Ihab\StudioProjects\GradProject\sara_music\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:20:25-75
+165            </intent-filter>
+166        </service>
+167        <service
+167-->[com.google.android.datatransport:transport-backend-cct:3.1.3] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\ae319ec1c06380152865e77d0caaf937\jetified-transport-backend-cct-3.1.3\AndroidManifest.xml:29:9-35:19
+168            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+168-->[com.google.android.datatransport:transport-backend-cct:3.1.3] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\ae319ec1c06380152865e77d0caaf937\jetified-transport-backend-cct-3.1.3\AndroidManifest.xml:30:13-103
+169            android:exported="false" >
+169-->[com.google.android.datatransport:transport-backend-cct:3.1.3] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\ae319ec1c06380152865e77d0caaf937\jetified-transport-backend-cct-3.1.3\AndroidManifest.xml:31:13-37
+170            <meta-data
+170-->[com.google.android.datatransport:transport-backend-cct:3.1.3] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\ae319ec1c06380152865e77d0caaf937\jetified-transport-backend-cct-3.1.3\AndroidManifest.xml:32:13-34:39
+171                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+171-->[com.google.android.datatransport:transport-backend-cct:3.1.3] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\ae319ec1c06380152865e77d0caaf937\jetified-transport-backend-cct-3.1.3\AndroidManifest.xml:33:17-94
+172                android:value="cct" />
+172-->[com.google.android.datatransport:transport-backend-cct:3.1.3] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\ae319ec1c06380152865e77d0caaf937\jetified-transport-backend-cct-3.1.3\AndroidManifest.xml:34:17-36
+173        </service>
+174        <service
+174-->[com.google.android.datatransport:transport-runtime:3.1.3] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\7d9966204c643eef90f6f37cce215e1d\jetified-transport-runtime-3.1.3\AndroidManifest.xml:26:9-30:19
+175            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+175-->[com.google.android.datatransport:transport-runtime:3.1.3] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\7d9966204c643eef90f6f37cce215e1d\jetified-transport-runtime-3.1.3\AndroidManifest.xml:27:13-117
+176            android:exported="false"
+176-->[com.google.android.datatransport:transport-runtime:3.1.3] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\7d9966204c643eef90f6f37cce215e1d\jetified-transport-runtime-3.1.3\AndroidManifest.xml:28:13-37
+177            android:permission="android.permission.BIND_JOB_SERVICE" >
+177-->[com.google.android.datatransport:transport-runtime:3.1.3] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\7d9966204c643eef90f6f37cce215e1d\jetified-transport-runtime-3.1.3\AndroidManifest.xml:29:13-69
+178        </service>
+179
+180        <receiver
+180-->[com.google.android.datatransport:transport-runtime:3.1.3] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\7d9966204c643eef90f6f37cce215e1d\jetified-transport-runtime-3.1.3\AndroidManifest.xml:32:9-34:40
+181            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+181-->[com.google.android.datatransport:transport-runtime:3.1.3] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\7d9966204c643eef90f6f37cce215e1d\jetified-transport-runtime-3.1.3\AndroidManifest.xml:33:13-132
+182            android:exported="false" />
+182-->[com.google.android.datatransport:transport-runtime:3.1.3] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\7d9966204c643eef90f6f37cce215e1d\jetified-transport-runtime-3.1.3\AndroidManifest.xml:34:13-37
+183
+184        <provider
+184-->[com.google.firebase:firebase-common:20.1.0] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\eb8f2d939ce0af8150b8a3f7bc61f475\jetified-firebase-common-20.1.0\AndroidManifest.xml:26:9-31:39
+185            android:name="com.google.firebase.provider.FirebaseInitProvider"
+185-->[com.google.firebase:firebase-common:20.1.0] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\eb8f2d939ce0af8150b8a3f7bc61f475\jetified-firebase-common-20.1.0\AndroidManifest.xml:27:13-77
+186            android:authorities="com.example.sara_music.firebaseinitprovider"
+186-->[com.google.firebase:firebase-common:20.1.0] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\eb8f2d939ce0af8150b8a3f7bc61f475\jetified-firebase-common-20.1.0\AndroidManifest.xml:28:13-72
+187            android:directBootAware="true"
+187-->[com.google.firebase:firebase-common:20.1.0] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\eb8f2d939ce0af8150b8a3f7bc61f475\jetified-firebase-common-20.1.0\AndroidManifest.xml:29:13-43
+188            android:exported="false"
+188-->[com.google.firebase:firebase-common:20.1.0] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\eb8f2d939ce0af8150b8a3f7bc61f475\jetified-firebase-common-20.1.0\AndroidManifest.xml:30:13-37
+189            android:initOrder="100" />
+189-->[com.google.firebase:firebase-common:20.1.0] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\eb8f2d939ce0af8150b8a3f7bc61f475\jetified-firebase-common-20.1.0\AndroidManifest.xml:31:13-36
+190
+191        <receiver
+191-->[com.google.android.gms:play-services-measurement:20.1.2] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\8cd43dcd3ab89a39289ec50fb78806d2\jetified-play-services-measurement-20.1.2\AndroidManifest.xml:29:9-33:20
+192            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+192-->[com.google.android.gms:play-services-measurement:20.1.2] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\8cd43dcd3ab89a39289ec50fb78806d2\jetified-play-services-measurement-20.1.2\AndroidManifest.xml:30:13-85
+193            android:enabled="true"
+193-->[com.google.android.gms:play-services-measurement:20.1.2] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\8cd43dcd3ab89a39289ec50fb78806d2\jetified-play-services-measurement-20.1.2\AndroidManifest.xml:31:13-35
+194            android:exported="false" >
+194-->[com.google.android.gms:play-services-measurement:20.1.2] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\8cd43dcd3ab89a39289ec50fb78806d2\jetified-play-services-measurement-20.1.2\AndroidManifest.xml:32:13-37
+195        </receiver>
+196
+197        <service
+197-->[com.google.android.gms:play-services-measurement:20.1.2] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\8cd43dcd3ab89a39289ec50fb78806d2\jetified-play-services-measurement-20.1.2\AndroidManifest.xml:35:9-38:40
+198            android:name="com.google.android.gms.measurement.AppMeasurementService"
+198-->[com.google.android.gms:play-services-measurement:20.1.2] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\8cd43dcd3ab89a39289ec50fb78806d2\jetified-play-services-measurement-20.1.2\AndroidManifest.xml:36:13-84
+199            android:enabled="true"
+199-->[com.google.android.gms:play-services-measurement:20.1.2] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\8cd43dcd3ab89a39289ec50fb78806d2\jetified-play-services-measurement-20.1.2\AndroidManifest.xml:37:13-35
+200            android:exported="false" />
+200-->[com.google.android.gms:play-services-measurement:20.1.2] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\8cd43dcd3ab89a39289ec50fb78806d2\jetified-play-services-measurement-20.1.2\AndroidManifest.xml:38:13-37
+201        <service
+201-->[com.google.android.gms:play-services-measurement:20.1.2] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\8cd43dcd3ab89a39289ec50fb78806d2\jetified-play-services-measurement-20.1.2\AndroidManifest.xml:39:9-43:72
+202            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+202-->[com.google.android.gms:play-services-measurement:20.1.2] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\8cd43dcd3ab89a39289ec50fb78806d2\jetified-play-services-measurement-20.1.2\AndroidManifest.xml:40:13-87
+203            android:enabled="true"
+203-->[com.google.android.gms:play-services-measurement:20.1.2] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\8cd43dcd3ab89a39289ec50fb78806d2\jetified-play-services-measurement-20.1.2\AndroidManifest.xml:41:13-35
+204            android:exported="false"
+204-->[com.google.android.gms:play-services-measurement:20.1.2] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\8cd43dcd3ab89a39289ec50fb78806d2\jetified-play-services-measurement-20.1.2\AndroidManifest.xml:42:13-37
+205            android:permission="android.permission.BIND_JOB_SERVICE" />
+205-->[com.google.android.gms:play-services-measurement:20.1.2] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\8cd43dcd3ab89a39289ec50fb78806d2\jetified-play-services-measurement-20.1.2\AndroidManifest.xml:43:13-69
+206
+207        <activity
+207-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\37425ca1da537beeff65bfee35ec9b80\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+208            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+208-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\37425ca1da537beeff65bfee35ec9b80\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+209            android:exported="false"
+209-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\37425ca1da537beeff65bfee35ec9b80\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+210            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+210-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\37425ca1da537beeff65bfee35ec9b80\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+211
+212        <meta-data
+212-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\2ffdea9840cb447d8a46ba75a1207d80\jetified-play-services-basement-18.0.0\AndroidManifest.xml:21:9-23:69
+213            android:name="com.google.android.gms.version"
+213-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\2ffdea9840cb447d8a46ba75a1207d80\jetified-play-services-basement-18.0.0\AndroidManifest.xml:22:13-58
+214            android:value="@integer/google_play_services_version" />
+214-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\Ihab\.gradle\caches\transforms-2\files-2.1\2ffdea9840cb447d8a46ba75a1207d80\jetified-play-services-basement-18.0.0\AndroidManifest.xml:23:13-66
+215    </application>
+216
+217</manifest>

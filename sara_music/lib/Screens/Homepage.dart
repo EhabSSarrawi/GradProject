@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_advanced_avatar/flutter_advanced_avatar.dart';
+import 'package:sara_music/Games/GamePage.dart';
 import 'package:sara_music/Screens/Booking.dart';
 import 'package:sara_music/Screens/Category.dart';
 import 'package:sara_music/Screens/Details_screen.dart';
@@ -34,6 +36,20 @@ class HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            Navigator.of(context).push(MaterialPageRoute(
+                builder: (BuildContext context) => Gamepage()));
+          },
+          tooltip: "Games",
+          elevation: 10.0,
+          foregroundColor: Color.fromARGB(255, 255, 255, 255),
+          backgroundColor: Color.fromARGB(255, 236, 32, 100),
+          child: Icon(FontAwesome.gamepad),
+          shape: BeveledRectangleBorder(
+            borderRadius: BorderRadius.circular(10),
+            side: BorderSide(color: Colors.cyanAccent),
+          )),
       drawer: MyDrawer(),
       body: Padding(
         padding: EdgeInsets.only(top: 50, left: 20, right: 20),
@@ -88,7 +104,10 @@ class HomepageState extends State<Homepage> {
                       style: GoogleFonts.sansita(
                           fontSize: 18, color: Colors.blue)),
                   onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder:(BuildContext context) => Teachers()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (BuildContext context) => Teachers()));
                   },
                 )
               ],
@@ -154,29 +173,29 @@ class HomepageState extends State<Homepage> {
                             SizedBox(
                               height: 10,
                             ),
-                            Row(                             
-                            children: [
-                              SizedBox(width: 2.5,),
-                              Text(
-                                "4.5",
-                                style: GoogleFonts.sansita(
-                                    color: Color.fromARGB(255, 58, 57, 57)),
-                              ),
-                              SizedBox(
-                                width: 5,
-                              ),
-                              SmoothStarRating(
-                                size: 20,
-                                rating: 5,
-                                defaultIconData: Icons.star,
-                                starCount: 1,
-                                color: Colors.yellow,
-                                borderColor: Colors.yellow,
-                              ),
-                              
-                              
-                            ],
-                          ),
+                            Row(
+                              children: [
+                                SizedBox(
+                                  width: 2.5,
+                                ),
+                                Text(
+                                  "4.5",
+                                  style: GoogleFonts.sansita(
+                                      color: Color.fromARGB(255, 58, 57, 57)),
+                                ),
+                                SizedBox(
+                                  width: 5,
+                                ),
+                                SmoothStarRating(
+                                  size: 20,
+                                  rating: 5,
+                                  defaultIconData: Icons.star,
+                                  starCount: 1,
+                                  color: Colors.yellow,
+                                  borderColor: Colors.yellow,
+                                ),
+                              ],
+                            ),
                           ],
                         ),
                       ),
